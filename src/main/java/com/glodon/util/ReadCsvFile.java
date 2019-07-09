@@ -1,4 +1,4 @@
-package com.glodon.controller;
+package com.glodon.util;
 
 import com.csvreader.CsvReader;
 
