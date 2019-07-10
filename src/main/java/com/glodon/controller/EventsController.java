@@ -6,16 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
-@Controller("events")
+@RestController
 public class EventsController {
     @Autowired
-    UploadEventsService uploadEventsService;
+    private  UploadEventsService uploadEventsService;
 
-    @PostMapping
-    public String uploadFile(@RequestParam("file") MultipartFile file){
-        uploadEventsService.saveFile(file);
-        return new String("2");
+    @PostMapping("events")
+    public ModelAndView  uploadFile(@RequestParam("file") MultipartFile file){
+        Boolean aBoolean = uploadEventsService.saveFile(file);
+        return new ModelAndView("index");
     }
 }
