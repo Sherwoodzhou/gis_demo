@@ -60,10 +60,11 @@
         </dependency>
     </dependencies>
 
+
     <build>
         <pluginManagement>
             <plugins>
-                <plugin>
+                <plugin>v
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <configuration>
