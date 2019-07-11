@@ -14,7 +14,6 @@ public class FileUtil {
         }
         FileOutputStream out = new FileOutputStream(filePath+fileName);
         out.write(file);
-        out.flush();
         out.close();
     }
 

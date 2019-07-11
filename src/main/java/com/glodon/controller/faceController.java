@@ -2,12 +2,14 @@ package com.glodon.controller;
 
 
 import com.glodon.util.FileUtil;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 
-@RestController
+@Controller
+@RequestMapping("/")
 public class faceController {
 
     //跳转到上传文件的页面

@@ -19,7 +19,7 @@ public class ReadCsvFileService {
             }
             reader.close();
             System.out.println("读取的行数：" + csvList.size());
-            for (int row = 0; row < csvList.size(); row++) {
+/*            for (int row = 0; row < csvList.size(); row++) {
                 System.out.println("-----------------");
                 //打印每一行的数据
                 System.out.print(csvList.get(row)[0] + ",");
@@ -30,7 +30,7 @@ public class ReadCsvFileService {
                 if (csvList.get(row)[0].equals("lisa")) {
                     System.out.println("lisa的年龄为：" + csvList.get(row)[2]);
                 }
-            }
+            }*/
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
