@@ -1,5 +1,5 @@
-create table `events`(
-`event_id` int(15),`device_id` varchar(30),`timestamp` varchar(30),	`longitude` int (15),	`latitude` int (15)
+create table `event`(
+`event_id` int(7),`device_id` varchar(30),`timestamp` varchar(30),	`longitude` float (15),	`latitude` float (15)
 );
 
 ALTER TABLE `gis_demo`.`events`

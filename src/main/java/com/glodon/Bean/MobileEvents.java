@@ -1,62 +1,61 @@
 package com.glodon.Bean;
 
-import org.springframework.stereotype.Component;
+import java.io.Serializable;
 
-@Component
-public class MobileEvents {
-    private long event_id ;
-    private String device_id;
+public class MobileEvents implements Serializable {
+    private Integer eventId ;
+    private String deviceId;
     private String timestamp;
-    private long longitude;
-    private long latitude;
+    private Float longitude;
+    private Float latitude;
 
     //get方法
-    public long getEvent_id() {
-        return event_id;
+    public Integer getEvent_id() {
+        return eventId;
     }
 
     public String getDevice_id() {
-        return device_id;
+        return deviceId;
     }
 
     public String getTimestamp() {
         return timestamp;
     }
 
-    public long getLongitude() {
+    public Float getLongitude() {
         return longitude;
     }
 
-    public long getLatitude() {
+    public Float getLatitude() {
         return latitude;
     }
 
     //    set方法
-    public void setEvent_id(long event_id) {
-        this.event_id = event_id;
+    public void setEvent_id(Integer event_id) {
+        this.eventId = event_id;
     }
 
     public void setDevice_id(String device_id) {
-        this.device_id = device_id;
+        this.deviceId = device_id;
     }
 
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 
-    public void setLongitude(long longitude) {
+    public void setLongitude(Float longitude) {
         this.longitude = longitude;
     }
 
-    public void setLatitude(long latitude) {
+    public void setLatitude(Float latitude) {
         this.latitude = latitude;
     }
     //tostring
     @Override
     public String toString() {
         return "Events{" +
-                "event_id=" + event_id +
-                ", device_id='" + device_id + '\'' +
+                "event_id=" + eventId +
+                ", device_id='" + deviceId + '\'' +
                 ", timestamp='" + timestamp + '\'' +
                 ", longitude=" + longitude +
                 ", latitude=" + latitude +
