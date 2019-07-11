@@ -6,18 +6,6 @@ import org.springframework.core.Ordered;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.testng.annotations.ITestOrConfiguration;
-
-/**
- * Web MVC 配置适配器
- * @ClassName: WebAppConfigurer
- * @Description:
- * @author OnlyMate
- * @Date 2018年8月28日 下午2:39:31
- *
- * WebAppConfigurer extends WebMvcConfigurerAdapter 在Spring Boot2.0版本已过时了，用官网说的新的类替换
- *
- */
 
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {
@@ -25,9 +13,6 @@ public class MyMvcConfig implements WebMvcConfigurer {
     /**
      * springmvc视图解析
      * @Title: viewResolver
-     * @Description: TODO
-     * @Date 2018年8月28日 下午4:46:07
-     * @author OnlyMate
      * @return
      */
     @Bean
@@ -45,7 +30,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         WebMvcConfigurer.super.addViewControllers(registry);
-        registry.addViewController("/").setViewName("index");
+        registry.addViewController("/").setViewName("uploadimg");
         registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
     }
 

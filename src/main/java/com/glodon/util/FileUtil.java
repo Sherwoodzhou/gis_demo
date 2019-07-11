@@ -1,9 +1,9 @@
 package com.glodon.util;
 
-import org.springframework.stereotype.Component;
+        import org.springframework.stereotype.Component;
 
-import java.io.File;
-import java.io.FileOutputStream;
+        import java.io.File;
+        import java.io.FileOutputStream;
 
 @Component
 public class FileUtil {
@@ -16,5 +16,4 @@ public class FileUtil {
         out.write(file);
         out.close();
     }
-
 }

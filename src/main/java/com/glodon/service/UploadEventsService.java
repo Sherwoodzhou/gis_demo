@@ -17,7 +17,7 @@ public class UploadEventsService {
 
     public Boolean saveFile(MultipartFile newFile) {
 
-        String path = "D:\\upload";
+        String path = "D:\\upload\\";
         String fileName = "test.txt";
         long start = System.currentTimeMillis();
         try {
