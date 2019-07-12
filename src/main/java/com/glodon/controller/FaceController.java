@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("/")
-public class faceController {
+public class FaceController {
 
     //跳转到上传文件的页面
     @RequestMapping(value="/gouploadimg", method = RequestMethod.GET)

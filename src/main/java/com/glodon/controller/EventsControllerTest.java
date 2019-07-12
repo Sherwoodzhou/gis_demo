@@ -16,8 +16,9 @@ public class EventsControllerTest {
                 "{\"lng\": 116.389275,\"lat\": 39.925818,\"count\": -10000000}]";
         System.out.println(heatmapData);
         System.out.println(StringEscapeUtils.unescapeJava(heatmapData));
-        mv.setViewName("test");
-        mv.addObject("heatmapData",StringEscapeUtils.unescapeJava(heatmapData));
+        mv.setViewName("testview");
+        //mv.addObject("heatmapData",StringEscapeUtils.unescapeJava(heatmapData));
+        mv.addObject("heatmapData",heatmapData);
         return mv;
     }
 }

@@ -7,9 +7,11 @@
 </head>
 <body>
 <span th:text="${heatmapData}"></span>
-<script type="text/javascript">
-    var heatmapData =[[${heatmapData}]];
+<script type="text/javascript" th:inline="javascript">/*关联文本的表达方式*/
+/*    var heatmapData =[[${heatmapData}]];
     JSON.parse(heatmapData);
+    console.log(heatmapData);
+    console.log(5 + 6);*/
 </script>
 </body>
 </html>

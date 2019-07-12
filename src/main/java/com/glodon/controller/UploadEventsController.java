@@ -18,7 +18,7 @@ public class UploadEventsController {
     @Autowired
     UploadEventsService uploadEventsService;
 
-    @PostMapping("/events")
+    @PostMapping("/upload")
     @ResponseBody
     public ModelAndView getDir(@RequestParam("file") MultipartFile file) {
         String dir = uploadEventsService.saveFile(file);
@@ -26,9 +26,9 @@ public class UploadEventsController {
         String location=readCsvFileService.readCsvFile(dir);        //location json数据
         System.out.println(location);
         ModelAndView mv = new ModelAndView();
-        String heatmapData = StringEscapeUtils.escapeJavaScript(location);
+        //String heatmapData = StringEscapeUtils.escapeJavaScript(location);
         mv.setViewName("gis");
-        mv.addObject("heatmapData",heatmapData);
+        mv.addObject("heatmapData",location);
         return mv;
     }
 }

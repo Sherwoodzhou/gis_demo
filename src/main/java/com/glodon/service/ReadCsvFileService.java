@@ -29,7 +29,7 @@ public class ReadCsvFileService {
             System.out.println("读取的行数：" + csvList.size());
 
             int count=0;
-            for (int row = 1; row < 5; row++) {
+            for (int row = 1; row < 1000; row++) {
                 //for (int row = 1; row < csvList.size(); row++) {
                 MobileEvents mobileEvents=new MobileEvents();
                 mobileEvents.setEvent_id(Integer.valueOf(csvList.get(row)[0]));

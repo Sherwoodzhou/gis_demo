@@ -36,6 +36,8 @@
 <script src="https://a.amap.com/jsapi_demos/static/bezier/bezier.js"></script>
 <script type="text/javascript" th:inline="javascript">/*关联文本的表达方式*/
     var heatmapData3 =[[${heatmapData}]];
+
+
     var heatmapData2 = [{
         "lng": 116.191031,
         "lat": 39.988585,
@@ -82,7 +84,7 @@
     var heatmap = new AMap.Heatmap(map, heatmapOpts);
 
     heatmap.setDataSet({
-        data: heatmapData,
+        data: heatmapData3,
         max: 500
     });
 
