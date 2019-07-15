@@ -1,7 +1,7 @@
 package com.glodon.service;
 
 import com.csvreader.CsvReader;
-import com.glodon.Bean.MobileEvents;
+import com.glodon.Bean.DangerousHouse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.nio.charset.Charset;
@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class SaveCsvToDatabaseService {
     @Autowired
-    private MobileEventsService mobileEventsService;
+    private DangerousHouseService dangerousHouseService;
 
     /**
      * 读取本地文件到数据
@@ -29,18 +29,19 @@ public class SaveCsvToDatabaseService {
             }
             reader.close();
             System.out.println("读取的行数：" + csvList.size());
-            List<MobileEvents> batch = new ArrayList<>();
-            for (int row = 1; row < 1000; row++) {
-                MobileEvents mobileEvents = new MobileEvents();
-                mobileEvents.setEvent_id(Integer.valueOf(csvList.get(row)[0]));
-                mobileEvents.setDevice_id(csvList.get(row)[1]);
-                mobileEvents.setTimestamp(csvList.get(row)[2]);
-                mobileEvents.setLongitude(Float.parseFloat(csvList.get(row)[3]));
-                mobileEvents.setLatitude(Float.parseFloat(csvList.get(row)[4]));
-                batch.add(mobileEvents);
-                //mobileEventsService.addMobileEvents(mobileEvents);
+            List<DangerousHouse> batch = new ArrayList<>();
+
+            for (int row = 1; row < csvList.size(); row++) {
+                DangerousHouse dangerousHouse = new DangerousHouse();
+                dangerousHouse.setZip_code(Integer.valueOf(csvList.get(row)[0]));
+                dangerousHouse.setAddress(csvList.get(row)[1]);
+                dangerousHouse.setCount(Integer.valueOf(csvList.get(row)[2]));
+                dangerousHouse.setLongitude(Float.parseFloat(csvList.get(row)[3]));
+                dangerousHouse.setLatitude(Float.parseFloat(csvList.get(row)[4]));
+                batch.add(dangerousHouse);
+                //DangerousHouseService.addMobileEvents(dangerousHouse);      //单行插入
             }
-            mobileEventsService.batchInsert(batch);
+            dangerousHouseService.batchInsert(batch);     //批量插入
         } catch (Exception e) {
             e.printStackTrace();
         }

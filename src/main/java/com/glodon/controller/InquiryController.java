@@ -2,6 +2,7 @@ package com.glodon.controller;
 
 import com.glodon.Bean.BO.GisModle;
 import com.glodon.service.InquiryEventsService;
+import com.glodon.service.InquiryHouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,7 @@ import java.util.List;
 public class InquiryController {
 
     @Autowired
-    private InquiryEventsService inqueryMobileEventsDir;
+    private InquiryHouseService inquiryHouseService;
 
     /**
      * 查询文件，并返回热力图
@@ -22,7 +23,7 @@ public class InquiryController {
     @RequestMapping("/inquiry")
     @ResponseBody
     public ModelAndView inquiry() {
-        List<GisModle> dir = inqueryMobileEventsDir.inquiryDir();
+        List<GisModle> dir = inquiryHouseService.inquiryDir();
         for (GisModle gisModle : dir) {
             System.out.println(gisModle);
         }

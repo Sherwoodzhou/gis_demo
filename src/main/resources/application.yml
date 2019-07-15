@@ -11,3 +11,6 @@ spring:
     username: root
     password: 123
     url: jdbc:mysql://127.0.0.1:3306/event?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+logging:
+  file:
+    root: my.log   #要制定日志所记录的范围

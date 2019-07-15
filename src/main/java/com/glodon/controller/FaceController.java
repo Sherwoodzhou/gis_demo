@@ -1,6 +1,5 @@
 package com.glodon.controller;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,9 +13,6 @@ public class FaceController {
      */
     @RequestMapping(value = "/uploaddata", method = RequestMethod.GET)
     public String goUploadImg() {
-
         return "uploaddata";
     }
-
-
 }
