@@ -30,7 +30,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         WebMvcConfigurer.super.addViewControllers(registry);
-        registry.addViewController("/").setViewName("uploadimg");
+        registry.addViewController("/").setViewName("uploaddata");
         registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
     }
 

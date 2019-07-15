@@ -1,18 +1,17 @@
 package com.glodon.util;
 
-        import org.springframework.stereotype.Component;
-
-        import java.io.File;
-        import java.io.FileOutputStream;
+import org.springframework.stereotype.Component;
+import java.io.File;
+import java.io.FileOutputStream;
 
 @Component
 public class FileUtil {
     public static void uploadFile(byte[] file, String filePath, String fileName) throws Exception {
         File targetFile = new File(filePath);
-        if(!targetFile.exists()){
+        if (!targetFile.exists()) {
             targetFile.mkdirs();
         }
-        FileOutputStream out = new FileOutputStream(filePath+fileName);
+        FileOutputStream out = new FileOutputStream(filePath + fileName);
         out.write(file);
         out.close();
     }

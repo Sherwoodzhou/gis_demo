@@ -1,8 +1,6 @@
 package com.glodon.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -12,13 +10,18 @@ import java.io.IOException;
 @Service
 public class UploadEventsService {
 
+    /**
+     * 数据上传到本地硬盘
+     * @param newFile
+     * @return
+     */
     public String saveFile(MultipartFile newFile) {
         String path = "D:\\upload";
         String fileName = "test.txt";
         try {
             //System.out.println("开始");
             byte[] sourceByte = newFile.getBytes();
-            File file = new File(path+"\\"+fileName);//文件路径（路径+文件名）
+            File file = new File(path + "\\" + fileName);//文件路径（路径+文件名）
             if (!file.exists()) {   //文件不存在则创建文件，先创建目录
                 File dir = new File(file.getParent());
                 dir.mkdirs();
@@ -30,12 +33,11 @@ public class UploadEventsService {
             //System.out.println("存储路径"+path+"\\"+fileName);
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             // do something
             //System.out.println("结束");
         }
-        //readCsvFileService.readCsvFile(path+fileName);
-        return path+"\\"+fileName;
+        return path + "\\" + fileName;
     }
 
 }

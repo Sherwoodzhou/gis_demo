@@ -2,6 +2,9 @@ package com.glodon.Bean;
 
 import java.io.Serializable;
 
+/**
+ * 上传来的数据
+ */
 public class MobileEvents implements Serializable {
     private Integer eventId ;
     private String deviceId;

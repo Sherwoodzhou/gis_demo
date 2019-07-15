@@ -1,34 +1,36 @@
 package com.glodon.controller;
 
-import com.glodon.service.ReadCsvFileService;
-import com.glodon.service.UploadEventsService;
-import org.apache.commons.lang.StringEscapeUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
+import com.glodon.service.SaveCsvToDatabaseService;
+        import com.glodon.service.UploadEventsService;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.stereotype.Controller;
+        import org.springframework.web.bind.annotation.PostMapping;
+        import org.springframework.web.bind.annotation.RequestParam;
+        import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class UploadEventsController {
-    @Autowired
-    ReadCsvFileService readCsvFileService;
+
     @Autowired
     UploadEventsService uploadEventsService;
+    @Autowired
+    SaveCsvToDatabaseService saveCsvToDatabaseService;
 
+    /**
+     * 存储数据，并返回成功页面
+     * @param file
+     * @return
+     */
     @PostMapping("/upload")
-    @ResponseBody
-    public ModelAndView getDir(@RequestParam("file") MultipartFile file) {
+    /*    @ResponseBody*//*这里不需要*/
+    public String getDir(@RequestParam("file") MultipartFile file) {
         String dir = uploadEventsService.saveFile(file);
-        //System.out.println(file);
-        String location=readCsvFileService.readCsvFile(dir);        //location json数据
-        System.out.println(location);
-        ModelAndView mv = new ModelAndView();
-        //String heatmapData = StringEscapeUtils.escapeJavaScript(location);
-        mv.setViewName("gis");
-        mv.addObject("heatmapData",location);
-        return mv;
+        System.out.println("开始");
+        long start = System.currentTimeMillis();
+        boolean status = saveCsvToDatabaseService.saveToDatabase(dir);
+        long end = System.currentTimeMillis();
+        System.out.println(end - start);
+        System.out.println("结束");
+        return "success";
     }
 }

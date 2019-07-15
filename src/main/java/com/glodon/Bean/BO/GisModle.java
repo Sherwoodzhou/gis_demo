@@ -1,9 +1,11 @@
 package com.glodon.Bean.BO;
 
-import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
+/**
+ * gis的经纬度信息
+ */
 public class GisModle implements Serializable {
 
     private Float lng;

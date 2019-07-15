@@ -1,4 +1,4 @@
-package com.glodon.controller;
+package com.glodon;
 
 import org.apache.commons.lang.StringEscapeUtils;
 import org.springframework.stereotype.Controller;
@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class EventsControllerTest {
     @RequestMapping(value="/test", method = RequestMethod.GET)
     public ModelAndView goUploadImg() {
-        //跳转到 templates 目录下的 uploadimg.html
+        //跳转到 templates 目录下的 uploaddata.html
         ModelAndView mv = new ModelAndView();
         String heatmapData = "[{\"lng\": 116.191031,\"lat\": 39.988585,\"count\": 10000000000}," +
                 "{\"lng\": 116.389275,\"lat\": 39.925818,\"count\": -10000000}]";
