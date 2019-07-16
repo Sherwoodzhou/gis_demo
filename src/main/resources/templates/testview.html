@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link th:href="@{/css/1.css}" rel="stylesheet"/>
     <title>显示参数值</title>
 </head>
 <body>
-<span th:text="${heatmapData}"></span>
+<!--<span th:text="${heatmapData}"></span>-->
+<div>
+    <img src="../static/images/houses_16px_1219138_easyicon.net.png">
+</div>
 <script type="text/javascript" th:inline="javascript">/*关联文本的表达方式*/
 /*    var heatmapData =[[${heatmapData}]];
     JSON.parse(heatmapData);
     console.log(heatmapData);
     console.log(5 + 6);*/
+
 </script>
 </body>
 </html>

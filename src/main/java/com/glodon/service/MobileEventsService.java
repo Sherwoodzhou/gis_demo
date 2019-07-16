@@ -35,4 +35,6 @@ public class MobileEventsService {
     public List<GisModle> inqueryMobileEventsDir() {
         return mobileEventsDao.selectAllDir();
     }
+
+
 }

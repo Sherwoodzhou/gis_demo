@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <title>上传成功</title>
@@ -9,11 +9,13 @@
     <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
 
 </head>
-
 <body>
 
 <h1>上传成功</h1>
-<div>等待显示</div>
-
+<!--<span th:text="${fileName}"></span>-->
+<hr/>
+<div>以下是可查询文件</div>
+<a href="/inquiry">DangerousHouse.csv</a>
+<hr/>
 </body>
 </html>

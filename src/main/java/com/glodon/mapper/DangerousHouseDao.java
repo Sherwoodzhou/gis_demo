@@ -21,7 +21,10 @@ public interface DangerousHouseDao {
             ") values (#{zipcode},#{address},#{count},#{longitude},#{latitude})"})
     int addHouseBean(DangerousHouse DangerousHouse);
 
-    @Select("select longitude as lng,latitude as lat,count from dangerousHouse")
+    @Select("select count(`zip_code`) from dangerousHouse")
+    int selectSize();
+
+    @Select("select `longitude` as `lng`,`latitude` as `lat`,`count` from dangerousHouse")
     List<GisModle> selectAllDir();
 
     /**

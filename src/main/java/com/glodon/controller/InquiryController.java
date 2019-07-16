@@ -1,7 +1,6 @@
 package com.glodon.controller;
 
 import com.glodon.Bean.BO.GisModle;
-import com.glodon.service.InquiryEventsService;
 import com.glodon.service.InquiryHouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +22,7 @@ public class InquiryController {
     @RequestMapping("/inquiry")
     @ResponseBody
     public ModelAndView inquiry() {
-        List<GisModle> dir = inquiryHouseService.inquiryDir();
+        List<GisModle> dir = inquiryHouseService.   inquiryDir();
         for (GisModle gisModle : dir) {
             System.out.println(gisModle);
         }

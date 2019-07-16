@@ -1,4 +1,4 @@
-package com.glodon.config;
+package com.glodon.Bean;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -6,7 +6,9 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+/**
+ * 自定义拦截器
+ */
 @Slf4j
 public class MyInterceptor extends HandlerInterceptorAdapter {
 

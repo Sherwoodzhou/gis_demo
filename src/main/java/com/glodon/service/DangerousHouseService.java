@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class DangerousHouseService {
     @Autowired
-    private DangerousHouseDao DangerousHouseDao;
+    private DangerousHouseDao dangerousHouseDao;
 
 
     /**
@@ -22,11 +22,11 @@ public class DangerousHouseService {
      * @return
      */
     public int addDangerousHouse(DangerousHouse dangerousHouse) {
-        return DangerousHouseDao.addHouseBean(dangerousHouse);
+        return dangerousHouseDao.addHouseBean(dangerousHouse);
     }
 
     public int batchInsert(List<DangerousHouse> batch){
-        return DangerousHouseDao.batchInsert(batch);
+        return dangerousHouseDao.batchInsert(batch);
     }
 
     /**
@@ -34,6 +34,10 @@ public class DangerousHouseService {
      * @return
      */
     public List<GisModle> inqueryDangerousHouse() {
-        return DangerousHouseDao.selectAllDir();
+        return dangerousHouseDao.selectAllDir();
+    }
+
+    public int selectSize(){
+        return dangerousHouseDao.selectSize();
     }
 }

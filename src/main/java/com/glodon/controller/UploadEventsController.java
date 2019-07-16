@@ -7,6 +7,7 @@ import com.glodon.service.SaveCsvToDatabaseService;
         import org.springframework.web.bind.annotation.PostMapping;
         import org.springframework.web.bind.annotation.RequestParam;
         import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UploadEventsController {
@@ -23,14 +24,18 @@ public class UploadEventsController {
      */
     @PostMapping("/upload")
     /*    @ResponseBody*//*这里不需要*/
-    public String getDir(@RequestParam("file") MultipartFile file) {
+    public ModelAndView getDir(@RequestParam("file") MultipartFile file) {
         String dir = uploadEventsService.saveFile(file);
         System.out.println("开始");
         long start = System.currentTimeMillis();
-        boolean status = saveCsvToDatabaseService.saveToDatabase(dir);
+        boolean status = saveCsvToDatabaseService.saveToDatabase(dir);  //存入数据库的状态
         long end = System.currentTimeMillis();
-        System.out.println(end - start);
+        long time = end - start;
+        System.out.println("耗时:"+ time);
         System.out.println("结束");
-        return "success";
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("success");
+        mv.addObject("fileName",file.getOriginalFilename());
+        return mv;
     }
 }
