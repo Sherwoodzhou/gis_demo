@@ -1,6 +1,6 @@
 /*移动用户的数据*/
 create table `event`(
-`event_id` int(7),`device_id` varchar(30),`timestamp` varchar(30),	`longitude` float (15),	`latitude` float (15)
+`eventId` int(7),`deviceId` varchar(30),`timestamp` varchar(30),	`longitude` float (15),	`latitude` float (15)
 );
 
 ALTER TABLE `gis_demo`.`events`

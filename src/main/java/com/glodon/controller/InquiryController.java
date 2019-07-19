@@ -20,6 +20,7 @@ public class InquiryController {
      * @return
      */
     @RequestMapping("/inquiry")
+
     @ResponseBody
     public ModelAndView inquiry() {
         List<GisModle> dir = inquiryHouseService.   inquiryDir();
