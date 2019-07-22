@@ -29,18 +29,18 @@
         <figcaption id="axisHeight">高度</figcaption>
     </figure>
 </div>
-<!--<script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/resource/heatmapData.js"></script>这里是引用高德地图的事例数据-->
+<script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/resource/heatmapData.js"></script><!--这里是引用高德地图的事例数据-->
 <script src="https://webapi.amap.com/maps?v=1.4.15&key=dcdb0102f9125cd8f4f5a470e7604dab&plugin=AMap.CustomLayer,AMap.ControlBar,AMap.Heatmap"></script>
 <script src="https://a.amap.com/jsapi_demos/static/bezier/bezier.js"></script>
 <script type="text/javascript" th:inline="javascript">/*关联文本的表达方式*/
 /*后端传过来的数据*/
-var heatmapData3 = [[${heatmapData}]];
+/*var heatmapData3 = [[${heatmapData}]];*/
 
 var map = new AMap.Map("container", {
     viewMode: '3D',
     pitch: 70,
     resizeEnable: true,
-    center: [116.418261, 39.921984],
+    center: [106.71, 26.57],//修改中心
     zoom: 11.5
 });
 
@@ -82,7 +82,7 @@ var heatmap = new AMap.Heatmap(
 );
 
 heatmap.setDataSet({
-    data: heatmapData3,
+    data: heatmapData,
     max: 500
 });
 

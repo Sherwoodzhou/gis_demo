@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高德地图可视化</title>
+    <style>
+        .centerItem {
+            width: 1056px;
+            height: 740px;
+            /*background-color: rgb(4, 157, 252);*/
+            border: 1px solid #ccc;
+            margin: 100px auto 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+<!-- 展示 -->
+<div id="container" class="centerItem"></div>
+<script src="https://webapi.amap.com/loca?v=1.2.0&key=dcdb0102f9125cd8f4f5a470e7604dab"></script>
+<!-- 引入相关文件 -->
+<script src="//a.amap.com/Loca/static/dist/jquery.min.js"></script>
+<script>
+    var map = Loca.create('container', {
+        mapStyle: 'amap://styles/7daf7c6981b0bc497d78c23077f5492f', // 设置地图的显示样式，目前支持两种地图样式：第一种：自定义地图样式，如"amap://styles/d6bf8c1d69cea9f5c696185ad4ac4c86"可前往地图自定义平台定制自己的个性地图样式；第二种：官方样式模版,如"amap://styles/grey"。其他模版样式及自定义地图的使用说明见开发指南
+        viewMode: '3D', // 默认为‘2D’，可选’3D’，选择‘3D’会显示 3D 地图效果。
+        pitch: 50, // 俯仰角度，默认0，[0,83]，2D地图下无效
+        features: ['bg', 'road','building'], // 设置地图上显示的元素种类支持'bg'（地图背景）、'point'（POI点）、'road'（道路）、'building'（建筑物）
+        zoom: 8// 地图显示的缩放级别，若center与level未赋值，地图初始化默认显示用户所在城市范围,3D地图下，zoom值，可以设置为浮点数。（在V1.3.0版本level参数调整为zoom，3D地图修改自V1.4.0开始生效）
+    });
+
+    map.on('mapload', function() {
+        map.getMap().plugin(['AMap.ControlBar'], function() {
+            var controlBar = new AMap.ControlBar();
+            map.getMap().addControl(controlBar);
+        });
+    });
+
+    var colors = ["#08519c"];
+    $.get('../../static/htest.csv',function(data) {
+        console.log(data);
+        var data = data.data;
+        // 创建地图容器
+        var layer = Loca.visualLayer({
+            container: map,
+            type: 'polygon',
+            shape: 'polygon',
+            fitView: true
+        });
+        // 添加数据
+        layer.setData(data, {
+            lnglat: 'coordinates'
+        });
+
+        var idx = 0;
+        // 设置样式
+        layer.setOptions({
+            style: {
+                height: function() {
+                    return Math.random() * 20000;
+                },
+                opacity: 0.9,
+                color: function() {
+                    return colors[idx++ % colors.length];
+                }
+            }
+        });
+        // 执行绘制
+        layer.render();
+        // 绘制气泡图
+        var data =  [
+            { 'name': '高新区管委会', 'center': [117.135304,31.831846] },
+            { 'name': '创新公寓', 'center': [117.13526,31.834364] },
+            { 'name': '皖水公寓', 'center': [117.136595,31.844341] }
+            // ...
+        ];
+
+        var layerCircle = Loca.visualLayer({
+            container: map,
+            type: 'point',
+            shape: 'circle',
+            zIndex:210
+        });
+
+        // 添加数据
+        layerCircle.setData(data, {
+            // 指定地理座标所在列名
+            lnglat: 'center',
+            // 指定数据类型，支持 json、csv、tsv 格式
+            type: 'json'
+        });
+        // 设置样式
+        layerCircle.setOptions({
+            style: {
+                radius: 10,
+                color: 'red',
+                borderWidth: 0.5,
+                // borderColor: '#ffffff',
+                opacity: 0.8,
+                altitude: 1000
+            }
+        });
+
+        // 执行绘制
+        layerCircle.render();
+
+    });
+</script>
+</body>
+
+</html>

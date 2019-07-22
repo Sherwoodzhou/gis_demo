@@ -28,7 +28,9 @@ public class InquiryController {
             System.out.println(gisModle);
         }
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("gis");
+        //mv.setViewName("gis");
+        mv.setViewName("mGis/histogram_01.html");
+
         mv.addObject("heatmapData", dir);
         return mv;
     }
