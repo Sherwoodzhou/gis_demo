@@ -1,0 +1,18 @@
+2019-07-22 10:48:29.832  INFO 1352 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 1352 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
+2019-07-22 10:48:29.836  INFO 1352 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
+2019-07-22 15:55:18.299  INFO 3192 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 3192 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
+2019-07-22 15:55:18.301  INFO 3192 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
+2019-07-22 15:55:19.290  INFO 3192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2019-07-22 15:55:19.304  INFO 3192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-22 15:55:19.304  INFO 3192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-22 15:55:19.366  INFO 3192 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-22 15:55:19.367  INFO 3192 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1035 ms
+2019-07-22 15:55:19.623  INFO 3192 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-22 15:55:19.682  INFO 3192 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-07-22 15:55:19.846  INFO 3192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2019-07-22 15:55:19.848  INFO 3192 --- [main] com.glodon.GisApplication                : Started GisApplication in 1.825 seconds (JVM running for 2.3)
+2019-07-22 15:56:31.046  INFO 3192 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-22 15:56:31.047  INFO 3192 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-22 15:56:31.052  INFO 3192 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-07-22 15:56:31.092  INFO 3192 --- [http-nio-10000-exec-1] com.glodon.Bean.MyInterceptor            : /inquiry
+2019-07-22 15:56:31.353  INFO 3192 --- [http-nio-10000-exec-1] com.glodon.Bean.MyInterceptor            : /inquiry
