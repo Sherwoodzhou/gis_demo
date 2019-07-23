@@ -22,5 +22,11 @@ CREATE TABLE `dangeroushouse` (
   `count` int(30) NOT NULL,
   `longitude` float NOT NULL,
   `latitude` float NOT NULL,
+   `finished` int(15) NOT NULL,
+   `inprocess` int(15) NOT NULL,
+   `nostart` int(15) NOT NULL,
+   `nofound` int(15) NOT NULL,
+   `inappropriate` int(15) NOT NULL,
+   `proved` int(15) NOT NULL,
   PRIMARY KEY (`zip_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;

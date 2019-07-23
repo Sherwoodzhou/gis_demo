@@ -14,11 +14,11 @@ import java.util.Map;
 @Mapper
 public interface DangerousHouseDao {
     String TABLE_NAME = " dangerousHouseDao ";
-    String INSERT_FIELDS = " `zip_code`, `address`, `count`, longitude, latitude ";
+    String INSERT_FIELDS = " `zip_code`, `address`, `count`, `longitude`, `latitude`, `finished`,`inprocess`,`nostart`,`nofound`,`inappropriate`,`proved`";
     String SELECT_FIELDS = " zip_code, " + INSERT_FIELDS;
 
     @Insert({"insert into ", TABLE_NAME, "(", INSERT_FIELDS,
-            ") values (#{zipcode},#{address},#{count},#{longitude},#{latitude})"})
+            ") values (#{zipcode},#{address},#{count},#{longitude},#{latitude},#{finished},#{inprocess},#{nostart},#{nofound},#{inappropriate},#{proved})"})
     int addHouseBean(DangerousHouse DangerousHouse);
 
     @Select("select count(`zip_code`) from dangerousHouse")
@@ -29,6 +29,7 @@ public interface DangerousHouseDao {
 
     /**
      * 批量插入
+     *
      * @param DangerousHouse
      * @return
      */
@@ -40,9 +41,11 @@ public interface DangerousHouseDao {
         public String batchInsert(Map map) {
             List<DangerousHouse> MobileEventss = (List<DangerousHouse>) map.get("list");
             StringBuilder sb = new StringBuilder();
-            sb.append("INSERT INTO dangerousHouse (zip_code, address, count, longitude, latitude) VALUES ");
+            sb.append("INSERT INTO dangerousHouse (zip_code, address, count, longitude, latitude,finished,inprocess,nostart,nofound,inappropriate,proved) VALUES ");
             MessageFormat mf = new MessageFormat(
-            "(#'{'list[{0}].zip_code}, #'{'list[{0}].address}, #'{'list[{0}].count}, #'{'list[{0}].longitude}, #'{'list[{0}].latitude})"
+                    "(#'{'list[{0}].zip_code}, #'{'list[{0}].address}, #'{'list[{0}].count}, #'{'list[{0}].longitude}, #'{'list[{0}].latitude}, " +
+                            "#'{'list[{0}].finished}, #'{'list[{0}].inprocess}, #'{'list[{0}].nostart}, #'{'list[{0}].nofound}, #'{'list[{0}].inappropriate}, " +
+                            "#'{'list[{0}].proved})"
             );
 
             for (int i = 0; i < MobileEventss.size(); i++) {

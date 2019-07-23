@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
+@RequestMapping("/inquiry")
 public class InquiryController {
 
     @Autowired
@@ -19,19 +20,34 @@ public class InquiryController {
      * 查询文件，并返回热力图
      * @return
      */
-    @RequestMapping("/inquiry")
-
+    @RequestMapping("/heatmap")
     @ResponseBody
-    public ModelAndView inquiry() {
+    public ModelAndView inquiryHeatMap() {
         List<GisModle> dir = inquiryHouseService.   inquiryDir();
         for (GisModle gisModle : dir) {
             System.out.println(gisModle);
         }
         ModelAndView mv = new ModelAndView();
-        //mv.setViewName("gis");
-        mv.setViewName("mGis/histogram_01.html");
+        mv.setViewName("gis");
+//        mv.setViewName("mGis/histogram_01.html");
 
         mv.addObject("heatmapData", dir);
+        return mv;
+    }
+
+    /**
+     * 查询文件，并返回柱状图
+     * @return
+     */
+    @RequestMapping("/heatmap")
+    @ResponseBody
+    public ModelAndView inquiryGridLayer() {
+/*        List<GisModle> dir = inquiryHouseService.   inquiryDir();
+        for (GisModle gisModle : dir) {
+            System.out.println(gisModle);
+        }*/
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("mGis/gridlayer.html");
         return mv;
     }
 }

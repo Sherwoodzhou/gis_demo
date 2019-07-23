@@ -4,6 +4,7 @@ import com.csvreader.CsvReader;
 import com.glodon.Bean.DangerousHouse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public class SaveCsvToDatabaseService {
 
     /**
      * 读取本地文件到数据
+     *
      * @param filePath
      * @return
      */
@@ -31,7 +33,7 @@ public class SaveCsvToDatabaseService {
             System.out.println("读取的行数：" + csvList.size());
             List<DangerousHouse> batch = new ArrayList<>();
             //判断该表中是否已经有数据了,如果有，直接返回
-            if (dangerousHouseService.selectSize()>0){
+            if (dangerousHouseService.selectSize() > 0) {
                 return true;        //状态1
             }
             for (int row = 1; row < csvList.size(); row++) {
@@ -41,6 +43,12 @@ public class SaveCsvToDatabaseService {
                 dangerousHouse.setCount(Integer.valueOf(csvList.get(row)[2]));
                 dangerousHouse.setLongitude(Float.parseFloat(csvList.get(row)[3]));
                 dangerousHouse.setLatitude(Float.parseFloat(csvList.get(row)[4]));
+                dangerousHouse.setFinished(Integer.valueOf(csvList.get(row)[5]));
+                dangerousHouse.setInprocess(Integer.valueOf(csvList.get(row)[6]));
+                dangerousHouse.setNostart(Integer.valueOf(csvList.get(row)[7]));
+                dangerousHouse.setNofound(Integer.valueOf(csvList.get(row)[8]));
+                dangerousHouse.setInappropriate(Integer.valueOf(csvList.get(row)[9]));
+                dangerousHouse.setProved(Integer.valueOf(csvList.get(row)[10]));
                 batch.add(dangerousHouse);
                 //DangerousHouseService.addMobileEvents(dangerousHouse);      //单行插入
             }
