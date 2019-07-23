@@ -1,6 +1,6 @@
 package com.glodon.service;
 
-import com.glodon.Bean.BO.GisModle;
+import com.glodon.Bean.BO.GisModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,13 +17,13 @@ public class InquiryEventsService {
      * 经纬度查询并随机生成count值
      * @return
      */
-    public List<GisModle> inquiryDir() {
+    public List<GisModel> inquiryDir() {
 
-        List<GisModle> gisModles = mobileEventsService.inqueryMobileEventsDir();
+        List<GisModel> gisModels = mobileEventsService.inqueryMobileEventsDir();
         //随机生成count值
-        for (int i = 0; i < gisModles.size(); i++) {
-            gisModles.get(i).setCount((int) (Math.random() * 1000));
+        for (int i = 0; i < gisModels.size(); i++) {
+            gisModels.get(i).setCount((int) (Math.random() * 1000));
         }
-        return gisModles;
+        return gisModels;
     }
 }

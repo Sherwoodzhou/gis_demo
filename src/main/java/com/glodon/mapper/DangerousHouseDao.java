@@ -1,6 +1,6 @@
 package com.glodon.mapper;
 
-import com.glodon.Bean.BO.GisModle;
+import com.glodon.Bean.BO.GisModel;
 import com.glodon.Bean.DangerousHouse;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
@@ -25,7 +25,7 @@ public interface DangerousHouseDao {
     int selectSize();
 
     @Select("select `longitude` as `lng`,`latitude` as `lat`,`count` from dangerousHouse")
-    List<GisModle> selectAllDir();
+    List<GisModel> selectAllDir();
 
     /**
      * 批量插入

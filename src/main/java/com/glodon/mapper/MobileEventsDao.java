@@ -1,6 +1,6 @@
 package com.glodon.mapper;
 
-import com.glodon.Bean.BO.GisModle;
+import com.glodon.Bean.BO.GisModel;
 import com.glodon.Bean.MobileEvents;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
@@ -21,7 +21,7 @@ public interface MobileEventsDao {
     int addMobileEvents(MobileEvents mobileEvents);
 
     @Select("select longitude as lng,latitude as lat from event")
-    List<GisModle> selectAllDir();
+    List<GisModel> selectAllDir();
 /*
     @Select({"select ", SELECT_FIELDS, " from ", TABLE_NAME,
             " where event_id=#{eventId} order by id desc"})

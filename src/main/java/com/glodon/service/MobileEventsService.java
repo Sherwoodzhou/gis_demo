@@ -1,6 +1,6 @@
 package com.glodon.service;
 
-import com.glodon.Bean.BO.GisModle;
+import com.glodon.Bean.BO.GisModel;
 import com.glodon.Bean.MobileEvents;
 import com.glodon.mapper.MobileEventsDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,7 @@ public class MobileEventsService {
      * 数据库 经纬度查询
      * @return
      */
-    public List<GisModle> inqueryMobileEventsDir() {
+    public List<GisModel> inqueryMobileEventsDir() {
         return mobileEventsDao.selectAllDir();
     }
 

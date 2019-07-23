@@ -1,6 +1,6 @@
 package com.glodon.service;
 
-import com.glodon.Bean.BO.GisModle;
+import com.glodon.Bean.BO.GisModel;
 import com.glodon.Bean.DangerousHouse;
 import com.glodon.mapper.DangerousHouseDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class DangerousHouseService {
      * 数据库 经纬度查询
      * @return
      */
-    public List<GisModle> inqueryDangerousHouse() {
+    public List<GisModel> inqueryDangerousHouse() {
         return dangerousHouseDao.selectAllDir();
     }
 

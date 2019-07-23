@@ -1,6 +1,6 @@
 package com.glodon.controller;
 
-import com.glodon.Bean.BO.GisModle;
+import com.glodon.Bean.BO.GisModel;
 import com.glodon.service.InquiryHouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,17 +20,15 @@ public class InquiryController {
      * 查询文件，并返回热力图
      * @return
      */
-    @RequestMapping("/heatmap")
+    @RequestMapping("heatmap")
     @ResponseBody
     public ModelAndView inquiryHeatMap() {
-        List<GisModle> dir = inquiryHouseService.   inquiryDir();
-        for (GisModle gisModle : dir) {
-            System.out.println(gisModle);
+        List<GisModel> dir = inquiryHouseService.   inquiryDir();
+        for (GisModel gisModel : dir) {
+            System.out.println(gisModel);
         }
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("gis");
-//        mv.setViewName("mGis/histogram_01.html");
-
+        mv.setViewName("mGis/heatmap");
         mv.addObject("heatmapData", dir);
         return mv;
     }
@@ -39,11 +37,11 @@ public class InquiryController {
      * 查询文件，并返回柱状图
      * @return
      */
-    @RequestMapping("/heatmap")
+    @RequestMapping("gridlayer")
     @ResponseBody
     public ModelAndView inquiryGridLayer() {
-/*        List<GisModle> dir = inquiryHouseService.   inquiryDir();
-        for (GisModle gisModle : dir) {
+/*        List<GisModel> dir = inquiryHouseService.   inquiryDir();
+        for (GisModel gisModle : dir) {
             System.out.println(gisModle);
         }*/
         ModelAndView mv = new ModelAndView();

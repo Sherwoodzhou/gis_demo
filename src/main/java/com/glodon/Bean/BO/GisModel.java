@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * gis的经纬度信息
  */
-public class GisModle implements Serializable {
+public class GisModel implements Serializable {
 
     private Float lng;
     private Float lat;

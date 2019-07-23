@@ -1,6 +1,6 @@
 package com.glodon.service;
 
-import com.glodon.Bean.BO.GisModle;
+import com.glodon.Bean.BO.GisModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +16,10 @@ public class InquiryHouseService {
      * 经纬度查询并随机生成count值
      * @return
      */
-    public List<GisModle> inquiryDir() {
+    public List<GisModel> inquiryDir() {
 
-        List<GisModle> gisModles = dangerousHouseService.inqueryDangerousHouse();
+        List<GisModel> gisModels = dangerousHouseService.inqueryDangerousHouse();
         //随机生成count值
-        return gisModles;
+        return gisModels;
     }
 }
