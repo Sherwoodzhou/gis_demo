@@ -1,5 +1,6 @@
 package com.glodon.service;
 
+import com.glodon.Bean.BO.CityGisModel;
 import com.glodon.Bean.BO.GisModel;
 import com.glodon.Bean.DangerousHouse;
 import com.glodon.mapper.DangerousHouseDao;
@@ -18,6 +19,7 @@ public class DangerousHouseService {
 
     /**
      * 数据库 存储
+     *
      * @param dangerousHouse
      * @return
      */
@@ -25,19 +27,26 @@ public class DangerousHouseService {
         return dangerousHouseDao.addHouseBean(dangerousHouse);
     }
 
-    public int batchInsert(List<DangerousHouse> batch){
+    public int batchInsert(List<DangerousHouse> batch) {
         return dangerousHouseDao.batchInsert(batch);
     }
 
     /**
      * 数据库 经纬度查询
+     *
      * @return
      */
     public List<GisModel> inqueryDangerousHouse() {
         return dangerousHouseDao.selectAllDir();
     }
 
-    public int selectSize(){
+    public int selectSize() {
         return dangerousHouseDao.selectSize();
+    }
+
+    public List<CityGisModel> inqueryCityDangerousHouse() {
+        {
+            return dangerousHouseDao.selectCityDir();
+        }
     }
 }

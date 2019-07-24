@@ -1,5 +1,6 @@
 package com.glodon.controller;
 
+import com.glodon.Bean.BO.CityGisModel;
 import com.glodon.Bean.BO.GisModel;
 import com.glodon.service.InquiryHouseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +19,13 @@ public class InquiryController {
 
     /**
      * 查询文件，并返回热力图
+     *
      * @return
      */
     @RequestMapping("heatmap")
     @ResponseBody
     public ModelAndView inquiryHeatMap() {
-        List<GisModel> dir = inquiryHouseService.   inquiryDir();
+        List<GisModel> dir = inquiryHouseService.inquiryDir();
         for (GisModel gisModel : dir) {
             System.out.println(gisModel);
         }
@@ -35,9 +37,10 @@ public class InquiryController {
 
     /**
      * 查询文件，并返回柱状图
+     *
      * @return
      */
-    @RequestMapping("gridlayer")
+    @RequestMapping(value = "gridlayer")
     @ResponseBody
     public ModelAndView inquiryGridLayer() {
 /*        List<GisModel> dir = inquiryHouseService.   inquiryDir();
@@ -45,7 +48,42 @@ public class InquiryController {
             System.out.println(gisModle);
         }*/
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("mGis/gridlayer.html");
+        mv.setViewName("mGis/gridlayer");
         return mv;
     }
+
+    /**
+     * loca柱状图
+     * @return
+     */
+    @RequestMapping(value = "loca")
+    @ResponseBody
+    public ModelAndView inquiryLoca() {
+        List<CityGisModel> dir = inquiryHouseService.inquiryCityDir();
+        for (CityGisModel gisModle : dir) {
+            System.out.println(gisModle);
+        }
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("mGis/loca");
+        mv.addObject("heatmapData", dir);
+        return mv;
+    }
+
+    /**
+     * 飞线图
+     * @return
+     */
+    @RequestMapping(value = "flyline")
+    @ResponseBody
+    public ModelAndView inquiryFlyLine() {
+/*        List<CityGisModel> dir = inquiryHouseService.inquiryCityDir();
+        for (CityGisModel gisModle : dir) {
+            System.out.println(gisModle);
+        }*/
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("mGis/flylinemap");
+        //mv.addObject("heatmapData", dir);
+        return mv;
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.glodon.mapper;
 
+import com.glodon.Bean.BO.CityGisModel;
 import com.glodon.Bean.BO.GisModel;
 import com.glodon.Bean.DangerousHouse;
 import org.apache.ibatis.annotations.Insert;
@@ -27,6 +28,8 @@ public interface DangerousHouseDao {
     @Select("select `longitude` as `lng`,`latitude` as `lat`,`count` from dangerousHouse")
     List<GisModel> selectAllDir();
 
+    @Select("select `longitude` as `lng`,`latitude` as `lat`,`count`,`address` from dangerousHouse")
+    List<CityGisModel> selectCityDir();
     /**
      * 批量插入
      *
@@ -35,6 +38,8 @@ public interface DangerousHouseDao {
      */
     @InsertProvider(type = DangerousHouseDao.Provider.class, method = "batchInsert")
     int batchInsert(List<DangerousHouse> DangerousHouse);
+
+
 
     class Provider {
         /* 批量插入 */

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="containerOne" style="width:500px; height:300px"></div>
+<div id="containerTwo" style="width:500px; height:300px"></div>
+<div id="container3" style="width:500px; height:300px"></div>
+<div id="container4" style="width:500px; height:300px"></div>
+<script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/resource/heatmapData.js"></script><!--这里是引用高德地图的事例数据-->
+<script src="https://webapi.amap.com/maps?v=1.4.15&key=dcdb0102f9125cd8f4f5a470e7604dab&plugin=AMap.CustomLayer,AMap.ControlBar,AMap.Heatmap"></script>
+<script src="https://a.amap.com/jsapi_demos/static/bezier/bezier.js"></script>
+<script>
+    var mapOne = new AMap.Map('containerOne');
+    var mapTwo = new AMap.Map('containerTwo');
+    var map3 = new AMap.Map('container3');
+    var map4 = new AMap.Map('container4');
+
+    map3.on('complete', function(e){
+        // 地图图块加载完成后触发
+        alert("提示")
+    });
+</script>
+</body>
+</html>

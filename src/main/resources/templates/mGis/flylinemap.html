@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+    <title>热力图展示</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../static/css/app.css"/>
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <style>
+        img {
+            width: 25px;
+            height: 34px;
+        }
+    </style>
+</head>
+
+<body class="bg02">
+<header class="header">
+    <h3>贵州项目</h3>
+</header>
+
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="row fill-h">
+            <div class="col-lg-7 fill-h">
+                <div class="xpanel-wrapper xpanel-wrapper-1">
+                    <div class="xpanel">
+                        <div class="fill-h" id="bmapChart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 fill-h">
+                <div class="xpanel-wrapper xpanel-wrapper-2">
+                    <div class="xpanel">
+                        <div style="position: absolute; top: 30%; left: 80%;width: 137px;height: 155px;background-color: rgba(56,63,54,0.5);z-index: 999;">
+                        </div>
+                        <div style="position: absolute; top: 31%; left: 81%;width: 137px;height: 155px;z-index: 999;">
+                            <span style="color: #e5f3ff;">外省企业在黔投资项目共</span><br>
+                            <span style="color: #fcee59 ">1745</span><span style="color: #e5f3ff;">个</span><br><br>
+                            <span style="color: #e5f3ff;">项目总数最多的为</span><br>
+                            <span style="color: #fcee59 ">重庆</span> <span style="color: #e5f3ff;">省</span>
+                        </div>
+                        <div class="fill-h" id="heatmapChart">
+                        </div>
+                    </div>
+                </div>
+                <div class="xpanel-wrapper xpanel-wrapper-2">
+                    <div class="xpanel">
+                        <div style="position: absolute; top: 80%; left: 80%;width: 137px;height: 155px;background-color: rgba(56,63,54,0.5);z-index: 999;">
+                        </div>
+                        <div style="position: absolute; top: 81%; left: 81%;width: 137px;height: 155px;z-index: 999;">
+                            <span style="color: #e5f3ff;">贵州省在外的企业项目共有</span><br>
+                            <span style="color: #fc070c ">373</span><span style="color: #e5f3ff;">个</span><br><br>
+                            <span style="color: #e5f3ff;">项目总数最多的为</span><br>
+                            <span style="color: #fc070c ">广东</span> <span style="color: #e5f3ff;">省</span>
+                        </div>
+                        <div class="fill-h" id="coordChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://webapi.amap.com/maps?v=1.4.8&key=2a5072bcb1b308fb0a64020a0f868016"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts-amap/dist/echarts-amap.min.js" charset="UTF-8"></script>
+
+<script type="text/javascript">
+    //myChart是外省流向贵州的图，chart2是贵州流向外省的图
+    $(function () {
+        var myChart = echarts.init(document.getElementById('heatmapChart'));
+        myChart.setOption({
+            title: {
+                text: '外省企业在黔项目流向',
+                left: 'center',
+                textStyle: {
+                    color: '#e5f3ff'
+                }
+            },
+            amap: {
+                maxPitch: 60,
+                pitch: 10, //45 俯仰角
+                viewMode: '3D',
+                zoom: 5.5,
+                expandZoomRange: true,
+                zooms: [3, 20],
+                mapStyle: "amap://styles/darkblue", //地图主题
+                center: [106.630153, 26.647661], //中心点
+                rotation: 0,  //顺时针旋转角度
+                resizeEnable: true,
+            },
+            animation: false,
+            series: []
+        });
+
+        //上面的部分是echarts的配置，需要注意的是amap，这里的配置就是针对 高德地图 的配置了，而支持哪些配置
+        //可以去高德地图的开发平台去查看
+
+        var map = myChart.getModel().getComponent('amap').getAMap();
+        var layer = myChart.getModel().getComponent('amap').getLayer();
+
+        AMap.plugin(["AMap.ControlBar"], function () {
+            var bar = new AMap.ControlBar();
+            map.addControl(bar);
+        })
+        console.log("sss")
+
+
+        console.log("sss3")
+        var series = [
+            // 闪动的线
+            {
+                name: '上海 Top10',
+                coordinateSystem: 'amap',
+                type: 'lines',
+                zlevel: 1,
+                effect: {
+                    show: true,
+                    period: 2,
+                    trailLength: 0.7,
+                    color: '#2267f7',
+                    symbolSize: 3
+                },
+                lineStyle: {
+                    normal: {
+                        color: '#2267f7',
+                        width: 0,
+                        curveness: 0.2
+                    }
+                },
+                data: [
+                    {
+                        fromName: '重庆',
+                        toName: '贵阳',
+                        coords: [
+                            [106.558434, 29.568996], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '吉林省',
+                        toName: '贵阳',
+                        coords: [
+                            [125.33258, 43.901714], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '黑龙江',
+                        toName: '贵阳',
+                        coords: [
+                            [126.669653, 45.74793], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '宁夏',
+                        toName: '贵阳',
+                        coords: [
+                            [106.265605, 38.476878], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '青海',
+                        toName: '贵阳',
+                        coords: [
+                            [101.786462, 36.627159], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '云南',
+                        toName: '贵阳',
+                        coords: [
+                            [102.716416, 25.051562], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '天津',
+                        toName: '贵阳',
+                        coords: [
+                            [117.210813, 39.14393], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '安徽',
+                        toName: '贵阳',
+                        coords: [
+                            [117.33054, 31.734294], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '福建',
+                        toName: '贵阳',
+                        coords: [
+                            [119.302447, 26.106339], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '广西',
+                        toName: '贵阳',
+                        coords: [
+                            [108.334521, 22.821269], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }
+                ]
+            },
+            // 轨迹
+            {
+                name: '各省市到贵阳',
+                coordinateSystem: 'amap',
+                type: 'lines',
+                zlevel: 2,
+                symbol: ['none', 'arrow'],
+                symbolSize: 10,
+                lineStyle: {
+                    normal: {
+                        color: '#6ecef2',
+                        width: 1,
+                        opacity: 0.6,
+                        curveness: 0.2
+                    }
+                },
+                data: [
+                    {
+                        fromName: '重庆',
+                        toName: '贵阳',
+                        coords: [
+                            [106.558434, 29.568996], [106.630153, 26.647661]
+                        ],
+                        value: 95,
+                        tooltip: "重庆到贵阳"
+                    }, {
+                        fromName: '吉林省',
+                        toName: '贵阳',
+                        coords: [
+                            [125.33258, 43.901714], [106.630153, 26.647661]
+                        ],
+                        value: 95,
+                        tooltip: "吉林到贵阳"
+                    }, {
+                        fromName: '黑龙江',
+                        toName: '贵阳',
+                        coords: [
+                            [126.669653, 45.74793], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '宁夏',
+                        toName: '贵阳',
+                        coords: [
+                            [106.265605, 38.476878], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '青海',
+                        toName: '贵阳',
+                        coords: [
+                            [101.786462, 36.627159], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '云南',
+                        toName: '贵阳',
+                        coords: [
+                            [102.716416, 25.051562], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '天津',
+                        toName: '贵阳',
+                        coords: [
+                            [117.210813, 39.14393], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '安徽',
+                        toName: '贵阳',
+                        coords: [
+                            [117.33054, 31.734294], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '福建',
+                        toName: '贵阳',
+                        coords: [
+                            [119.302447, 26.106339], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '广西',
+                        toName: '贵阳',
+                        coords: [
+                            [108.334521, 22.821269], [106.630153, 26.647661]
+                        ],
+                        value: 95
+                    }
+                ]
+            },
+
+            // 贵阳圆点
+            {
+                name: '贵阳圆点',
+                type: 'effectScatter',
+                coordinateSystem: 'amap',
+                zlevel: 2,
+                symbolSize: 20,
+                rippleEffect: {
+                    brushType: 'stroke'
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'bottom',
+                        formatter: '{b}'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#4c61c8'
+                    }
+                },
+                data: [
+                    {
+                        name: '贵阳',
+                        value: [106.630153, 26.647661, 95]
+                    }
+                ]
+            }
+        ];
+        myChart.setOption({
+            series: series
+        });
+
+        //下面是确保高德地图渲染的时候，echarts同时也需要再次渲染一次，保持位置的同步
+        layer.render = function () {
+            // let series = myChart.getOption().seriesIndexes;
+            // myChart.setOption({
+            //     series: []
+            // });
+            myChart.setOption({
+                tooltip: {},
+                series: series
+            });
+
+        };
+
+        var chart2 = echarts.init(document.getElementById('coordChart'));
+        chart2.setOption({
+            title: {
+                text: '贵州企业在外项目流向',
+                left: 'center',
+                textStyle: {
+                    color: '#e5f3ff'
+                }
+            },
+            amap: {
+                maxPitch: 60,
+                pitch: 10, //45 俯仰角
+                viewMode: '3D',
+                zoom: 5.5,
+                expandZoomRange: true,
+                zooms: [3, 20],
+                mapStyle: "amap://styles/darkblue", //地图主题
+                center: [106.630153, 26.647661], //中心点
+                rotation: 0,  //顺时针旋转角度
+                resizeEnable: true,
+            },
+            animation: false,
+            series: []
+        });
+        var map2 = chart2.getModel().getComponent('amap').getAMap();
+        var layer2 = chart2.getModel().getComponent('amap').getLayer();
+        AMap.plugin(["AMap.ControlBar"], function () {
+            var bar = new AMap.ControlBar();
+            map2.addControl(bar);
+        })
+        var series2 = [
+            // 闪动的线
+            {
+                name: '上海 Top10',
+                coordinateSystem: 'amap',
+                type: 'lines',
+                zlevel: 1,
+                effect: {
+                    show: true,
+                    period: 2,
+                    trailLength: 0.7,
+                    color: '#2267f7',
+                    symbolSize: 3
+                },
+                lineStyle: {
+                    normal: {
+                        color: '#2267f7',
+                        width: 0,
+                        curveness: 0.2
+                    }
+                },
+                data: [
+                    {
+                        fromName: '贵阳',
+                        toName: '上海',
+                        coords: [
+                            [106.630153, 26.647661], [121.480539, 31.235929]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '河北',
+                        coords: [
+                            [106.630153, 26.647661], [114.536596, 38.043202]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '湖北',
+                        coords: [
+                            [106.630153, 26.647661], [114.348441, 30.5516]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '山西',
+                        coords: [
+                            [106.630153, 26.647661], [112.569376, 37.879829]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '新疆',
+                        coords: [
+                            [106.630153, 26.647661], [87.633473, 43.799238]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '青海',
+                        coords: [
+                            [106.630153, 26.647661], [101.786462, 36.627159]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '云南',
+                        coords: [
+                            [106.630153, 26.647661], [102.716416, 25.051562]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '广西',
+                        coords: [
+                            [106.630153, 26.647661], [108.334521, 22.821269]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '湖南',
+                        coords: [
+                            [106.630153, 26.647661], [112.989603, 28.11827]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '广东',
+                        coords: [
+                            [106.630153, 26.647661], [113.272429, 23.137949]
+                        ],
+                        value: 95
+                    }
+                ]
+            },
+            // 轨迹
+            {
+                name: '各省市到贵阳',
+                coordinateSystem: 'amap',
+                type: 'lines',
+                zlevel: 2,
+                symbol: ['none', 'arrow'],
+                symbolSize: 10,
+                lineStyle: {
+                    normal: {
+                        color: '#6ecef2',
+                        width: 1,
+                        opacity: 0.6,
+                        curveness: 0.2
+                    }
+                },
+                data: [
+                    {
+                        fromName: '贵阳',
+                        toName: '上海',
+                        coords: [
+                            [106.630153, 26.647661], [121.480539, 31.235929]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '河北',
+                        coords: [
+                            [106.630153, 26.647661], [114.536596, 38.043202]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '湖北',
+                        coords: [
+                            [106.630153, 26.647661], [114.348441, 30.5516]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '山西',
+                        coords: [
+                            [106.630153, 26.647661], [112.569376, 37.879829]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '新疆',
+                        coords: [
+                            [106.630153, 26.647661], [87.633473, 43.799238]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '青海',
+                        coords: [
+                            [106.630153, 26.647661], [101.786462, 36.627159]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '云南',
+                        coords: [
+                            [106.630153, 26.647661], [102.716416, 25.051562]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '广西',
+                        coords: [
+                            [106.630153, 26.647661], [108.334521, 22.821269]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '湖南',
+                        coords: [
+                            [106.630153, 26.647661], [112.989603, 28.11827]
+                        ],
+                        value: 95
+                    }, {
+                        fromName: '贵阳',
+                        toName: '广东',
+                        coords: [
+                            [106.630153, 26.647661], [113.272429, 23.137949]
+                        ],
+                        value: 95
+                    }
+                ]
+            },
+
+            // 贵阳圆点
+            {
+                name: '贵阳圆点',
+                type: 'effectScatter',
+                coordinateSystem: 'amap',
+                zlevel: 2,
+                symbolSize: 20,
+                rippleEffect: {
+                    brushType: 'stroke'
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'bottom',
+                        formatter: '{b}'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#4c61c8'
+                    }
+                },
+                data: [
+                    {
+                        name: '贵阳',
+                        value: [106.630153, 26.647661, 95]
+                    }
+                ]
+            }
+        ];
+        chart2.setOption({
+            series: series2
+        });
+        layer2.render = function () {
+            chart2.setOption({
+                tooltip: {},
+                series: series2
+            })
+        }
+        //定位地图
+        var map3 = new AMap.Map("bmapChart", {
+            mapStyle: "amap://styles/darkblue",
+            zoom: 13,
+            center: [116.4, 39.92],
+            resizeEnable: true
+        });
+        // 以 icon URL 的形式创建一个途经点
+        var viaMarker = new AMap.Marker({
+            position: new AMap.LngLat(116.38, 39.92),
+            // 将一张图片的地址设置为 icon
+            icon: '../../static/images/yellow.png',
+            // 设置了 icon 以后，设置 icon 的偏移量，以 icon 的 [center bottom] 为原点
+            offset: new AMap.Pixel(-13, -30)
+        });
+
+        var startMarker = new AMap.Marker({
+            position: new AMap.LngLat(116.45, 39.93),
+            // 将一张图片的地址设置为 icon
+            icon: '../../static/images/red.png',
+            // 设置了 icon 以后，设置 icon 的偏移量，以 icon 的 [center bottom] 为原点
+            offset: new AMap.Pixel(-13, -30)
+        });
+
+
+        // 将 markers 添加到地图
+        map3.add([viaMarker, startMarker]);
+
+    });
+
+</script>
+</body>
+</html>

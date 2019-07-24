@@ -98,17 +98,17 @@
         resizeEnable: true,
         pitch: 50,
         // 隐藏默认楼块
-/*        features: ['bg', 'road', 'point'],
-        layers: [
-            // 高德默认标准图层
-            new AMap.TileLayer.Satellite(),
-            // 楼块图层
-            new AMap.Buildings({
-                zooms: [16, 18],
-                zIndex: 10,
-                heightFactor: 2//2倍于默认高度，3D下有效
-            })
-        ],*///显示地理信息数据
+        /*        features: ['bg', 'road', 'point'],
+                layers: [
+                    // 高德默认标准图层
+                    new AMap.TileLayer.Satellite(),
+                    // 楼块图层
+                    new AMap.Buildings({
+                        zooms: [16, 18],
+                        zIndex: 10,
+                        heightFactor: 2//2倍于默认高度，3D下有效
+                    })
+                ],*///显示地理信息数据
         mapStyle: 'amap://styles/blue'/*amap://styles/5dacb9c4f3045c067fca187e97a870b3*/
 
     });
@@ -119,6 +119,7 @@
         var viewMode = '3D';
 
         initPointAdcode();
+
         function initPointAdcode() {
             gridLayer = new Loca.GridLayer({
                 map: map,
@@ -164,7 +165,7 @@
                     height: [0, height],
                     color: {
                         scale: 'quantize',
-                        value: ['rgb(255,237,160)', 'rgb(254,217,118)', 'rgb(254,178,76)', 'rgb(253,141,60)', 'rgb(252,78,42)', 'rgb(227,26,28)', 'rgb(189,0,38)', ],
+                        value: ['rgb(255,237,160)', 'rgb(254,217,118)', 'rgb(254,178,76)', 'rgb(253,141,60)', 'rgb(252,78,42)', 'rgb(227,26,28)', 'rgb(189,0,38)',],
                     },
                     opacity: .75
 
@@ -183,14 +184,14 @@
 
                 var ranges = colorLegend.map((item, index) => {
                     // range 可能为小数，可以自行取整计算
-                    item.range[0] = Math.round(item.range[0]/10000);
-                item.range[1] = Math.round(item.range[1]/10000);
+                    item.range[0] = Math.round(item.range[0] / 10000);
+                    item.range[1] = Math.round(item.range[1] / 10000);
 
-                if (index == colorLegend.length - 1) {
-                    return `<li class="label-item">${item.range[0]}</li><li class="label-item">${item.range[1]}</li>`;
-                }
-                return `<li class="label-item">${item.range[0]}</li>`;
-            });
+                    if (index == colorLegend.length - 1) {
+                        return `<li class="label-item">${item.range[0]}</li><li class="label-item">${item.range[1]}</li>`;
+                    }
+                    return `<li class="label-item">${item.range[0]}</li>`;
+                });
 
                 document.getElementById('legend-color').innerHTML = legends.join('');
                 document.getElementById('legend-label').innerHTML = ranges.join('');
@@ -198,11 +199,10 @@
 
             gridLayer.on('mousemove', (ev) => {
                 openInfoWin(map.getMap(), ev.originalEvent, {
-                    '位置': ev.rawData.coord,
-                    '热度': ev.rawData.value
+                    '位置': "一些",
+                    '热度': "文字"
                 });
             });
-
         }
 
         // 高度切换
@@ -220,6 +220,7 @@
                 }).render();
             }
         }
+
         onHeight();
     });
 
