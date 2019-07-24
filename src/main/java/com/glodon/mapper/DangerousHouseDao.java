@@ -30,6 +30,7 @@ public interface DangerousHouseDao {
 
     @Select("select `longitude` as `lng`,`latitude` as `lat`,`count`,`address` from dangerousHouse")
     List<CityGisModel> selectCityDir();
+
     /**
      * 批量插入
      *
@@ -38,7 +39,6 @@ public interface DangerousHouseDao {
      */
     @InsertProvider(type = DangerousHouseDao.Provider.class, method = "batchInsert")
     int batchInsert(List<DangerousHouse> DangerousHouse);
-
 
 
     class Provider {

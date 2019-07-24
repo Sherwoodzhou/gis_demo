@@ -86,4 +86,21 @@ public class InquiryController {
         return mv;
     }
 
+    /**
+     * 气泡图
+     * @return
+     */
+    @RequestMapping(value = "paomap")
+    @ResponseBody
+    public ModelAndView inquiryPaoMap() {
+/*        List<CityGisModel> dir = inquiryHouseService.inquiryCityDir();
+        for (CityGisModel gisModle : dir) {
+            System.out.println(gisModle);
+        }*/
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("mGis/paomap");
+        //mv.addObject("heatmapData", dir);
+        return mv;
+    }
+
 }

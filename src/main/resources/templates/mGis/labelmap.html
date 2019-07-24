@@ -20,15 +20,6 @@
 </head>
 <body>
 <div id="container"></div>
-<div class="graph">
-    <h2>heightBezier:</h2>
-    <input type="text" id="bezierInp" readonly="readonly"/>
-    <figure>
-        <canvas id="curve" width="210" height="550"></canvas>
-        <figcaption id="axisHeat">热度</figcaption>
-        <figcaption id="axisHeight">高度</figcaption>
-    </figure>
-</div>
 <script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/resource/heatmapData.js"></script><!--这里是引用高德地图的事例数据-->
 <script src="https://webapi.amap.com/maps?v=1.4.15&key=dcdb0102f9125cd8f4f5a470e7604dab&plugin=AMap.CustomLayer,AMap.ControlBar,AMap.Heatmap"></script>
 <script src="https://a.amap.com/jsapi_demos/static/bezier/bezier.js"></script>
@@ -49,11 +40,11 @@ map.addControl(new AMap.ControlBar({}));
 // 创建两个点标记
 var m1 = new AMap.Marker({
     position: [116.49, 39.9],
-    icon: "../static/images/houses_16px_1219138_easyicon.net.png"    /*路径要注意*/
+    icon: "../../static/images/houses_16px_1219138_easyicon.net.png"    /*路径要注意*/
 });
 var m2 = new AMap.Marker({
     position: [116.29, 39.9],
-    icon: "../static/images/houses_16px_1219138_easyicon.net.png"    /*路径要注意*/
+    icon: "../../static/images/houses_16px_1219138_easyicon.net.png"    /*路径要注意*/
 });
 var m3 = new AMap.Marker({
     position: [116.69, 39.9],

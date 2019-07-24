@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<title>大屏数据可视化 - 模板</title>
+		<link rel="stylesheet" href="../../static/css/tpl03app.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<h1 class="header-title">大屏数据可视化模板</h1>
+		</div>
+		<div class="wrapper">
+			<div class="content">
+				<div class="col col-l">
+					<div class="xpanel-wrapper xpanel-wrapper-40">
+						<div class="xpanel xpanel-l-t">
+							<div class="title"></div>
+						</div>
+					</div>
+					<div class="xpanel-wrapper xpanel-wrapper-60">
+						<div class="xpanel xpanel-l-b">
+							<div class="title"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col col-c">
+					<div class="xpanel-wrapper xpanel-wrapper-75">
+						<!--<div class="xpanel no-bg">
+						</div>-->
+                    <div id="containerOne" style="width: 100%;height: 100%;margin: 0px;font-size: 13px;"></div>
+
+					</div>
+					<div class="xpanel-wrapper xpanel-wrapper-25">
+						<div class="xpanel xpanel-c-b">
+							<div class="title title-long"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col col-r">
+					<div class="xpanel-wrapper xpanel-wrapper-25">
+						<div class="xpanel xpanel-r-t">
+							<div class="title"></div>
+						</div>
+					</div>
+					<div class="xpanel-wrapper xpanel-wrapper-30">
+						<div class="xpanel xpanel-r-m">
+							<div class="title"></div>
+						</div>
+					</div>
+					<div class="xpanel-wrapper xpanel-wrapper-45">
+						<div class="xpanel xpanel-r-b">
+							<div class="title"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/resource/heatmapData.js"></script><!--这里是引用高德地图的事例数据-->
+        <script src="https://webapi.amap.com/maps?v=1.4.15&key=dcdb0102f9125cd8f4f5a470e7604dab&plugin=AMap.CustomLayer,AMap.ControlBar,AMap.Heatmap"></script>
+        <script src="https://a.amap.com/jsapi_demos/static/bezier/bezier.js"></script>
+        <script>
+            var mapOne = new AMap.Map('containerOne',{
+                    viewMode: '3D',
+                    pitch: 50,
+                    resizeEnable: true,
+                    center: [106.71, 26.57],//修改中心
+                    zoom: 11.5,
+                    mapStyle: "amap://styles/blue"
+            });
+            var mapTwo = new AMap.Map('containerTwo');
+            var map3 = new AMap.Map('container3');
+            var map4 = new AMap.Map('container4');
+
+            map3.on('complete', function(e){
+                // 地图图块加载完成后触发
+                alert("提示")
+
+            });
+        </script>
+	</body>
+</html>

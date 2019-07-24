@@ -16,11 +16,20 @@
             height: 34px;
         }
     </style>
+    <!--<script type="text/javascript">
+        window.onload = function(){
+            var url=document.location.href;  //获取浏览器访问栏里的地址
+            if( url.indexOf("r=")==-1 ){    //判断地址后面是否多了某些值，没有就进方法里进行刷新
+                var t = new Date();
+                //window.location.href = "<%=request.getContextPath()%>/url?r="+t.getTime();
+            }
+        }
+    </script>-->
 </head>
 
 <body class="bg02">
 <header class="header">
-    <h3>贵州项目</h3>
+    <h3>建筑市场开放度</h3>
 </header>
 
 <div class="wrapper">
@@ -85,9 +94,9 @@
             },
             amap: {
                 maxPitch: 60,
-                pitch: 10, //45 俯仰角
+                pitch: 75, //45 俯仰角
                 viewMode: '3D',
-                zoom: 5.5,
+                zoom: 5,
                 expandZoomRange: true,
                 zooms: [3, 20],
                 mapStyle: "amap://styles/darkblue", //地图主题
@@ -359,9 +368,9 @@
             },
             amap: {
                 maxPitch: 60,
-                pitch: 10, //45 俯仰角
+                pitch: 50, //45 俯仰角
                 viewMode: '3D',
-                zoom: 5.5,
+                zoom: 5,
                 expandZoomRange: true,
                 zooms: [3, 20],
                 mapStyle: "amap://styles/darkblue", //地图主题
@@ -606,13 +615,14 @@
         //定位地图
         var map3 = new AMap.Map("bmapChart", {
             mapStyle: "amap://styles/darkblue",
-            zoom: 13,
-            center: [116.4, 39.92],
+            viewMode: '3D',
+            zoom: 7.2,
+            center: [106.71, 26.57],
             resizeEnable: true
         });
         // 以 icon URL 的形式创建一个途经点
         var viaMarker = new AMap.Marker({
-            position: new AMap.LngLat(116.38, 39.92),
+            position: new AMap.LngLat(106.730535, 26.610381),
             // 将一张图片的地址设置为 icon
             icon: '../../static/images/yellow.png',
             // 设置了 icon 以后，设置 icon 的偏移量，以 icon 的 [center bottom] 为原点
@@ -620,7 +630,7 @@
         });
 
         var startMarker = new AMap.Marker({
-            position: new AMap.LngLat(116.45, 39.93),
+            position: new AMap.LngLat(107.905456, 28.569077),
             // 将一张图片的地址设置为 icon
             icon: '../../static/images/red.png',
             // 设置了 icon 以后，设置 icon 的偏移量，以 icon 的 [center bottom] 为原点
