@@ -22,7 +22,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     }
     public void addInterceptors(InterceptorRegistry registry){
         List exclude = new ArrayList();//不拦截的列表
-        exclude.add("/icon/**");
+        exclude.add("/js/**");
         exclude.add("/templates/**");
         exclude.add("/static/**");
         registry.addInterceptor(myInterceptor())

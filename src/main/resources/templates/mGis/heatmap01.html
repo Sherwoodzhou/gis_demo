@@ -1,0 +1,102 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="content-type" content="text/html; charset=UTF-8"></meta>
+    <title>3D标签图</title>
+
+
+    <link rel="stylesheet" type="text/css" href="https://a.amap.com/jsapi_demos/static/bezier/bezier.css">
+    <style>
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<div class="graph">
+    <h2>heightBezier:</h2>
+    <input type="text" id="bezierInp" readonly="readonly"/>
+    <figure>
+        <canvas id="curve" width="210" height="550"></canvas>
+        <figcaption id="axisHeat">热度</figcaption>
+        <figcaption id="axisHeight">高度</figcaption>
+    </figure>
+</div>
+<script type="text/javascript" src="https://a.amap.com/jsapi_demos/static/resource/heatmapData.js"></script>
+<!--这里是引用高德地图的事例数据-->
+<script src="https://webapi.amap.com/maps?v=1.4.15&key=dcdb0102f9125cd8f4f5a470e7604dab&plugin=AMap.CustomLayer,AMap.ControlBar,AMap.Heatmap"></script>
+<script src="https://a.amap.com/jsapi_demos/static/bezier/bezier.js"></script>
+<script type="text/javascript" th:inline="javascript">/*关联文本的表达方式*/
+/*后端传过来的数据*/
+var heatmapData3 = [[${heatmapData}]];
+
+var map = new AMap.Map("container", {
+    viewMode: '3D',
+    pitch: 50,
+    resizeEnable: true,
+    center: [106.71, 26.57],//修改中心
+    zoom: 6,
+    mapStyle: "amap://styles/dark"
+});
+
+map.addControl(new AMap.ControlBar({}));
+
+var heatmapOpts = {
+    //radius :50,
+    //3d 相关的参数
+    '3d': {
+        //热度转高度的曲线控制参数，可以利用左侧的控制面板获取
+        heightBezier: [0.4, 0.2, 0.4, 0.8],
+        //取样精度，值越小，曲面效果越精细，但同时性能消耗越大
+        gridSize: 2,
+        heightScale: 1
+    },
+    opacity: [.75],
+    //zooms :[5,6]      //显示的范围
+
+};
+
+//初始化heatmap对象
+var heatmap = new AMap.Heatmap(
+    map,
+    heatmapOpts
+);
+
+heatmap.setDataSet({
+    data: heatmapData3,
+    max: 500
+});
+
+//控制左侧的曲线控制面板
+(function () {
+
+    var bezierInp = document.getElementById('bezierInp');
+
+    function onBezierUpdate(val) {
+
+        bezierInp.value = (val);
+
+        heatmapOpts['3d'].heightBezier = val;
+
+        if (heatmap) {
+            heatmap.setOptions(heatmapOpts);
+        }
+    }
+
+    bezierHelper.setBezier(heatmapOpts['3d'].heightBezier);
+
+    bezierInp.value = (bezierHelper.getBezier());
+
+    window.onBezierUpdate = onBezierUpdate;
+
+})();
+</script>
+</body>
+</html>

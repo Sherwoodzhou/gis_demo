@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
     <title>热力图展示</title>
     <link rel="stylesheet" href="../../static/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../../static/css/app.css"/>
+    <link rel="stylesheet" href="../../static/css/case03App.css"/>
     <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
     <style>
         img {
@@ -81,8 +81,10 @@
 <script src="https://cdn.jsdelivr.net/npm/echarts-amap/dist/echarts-amap.min.js" charset="UTF-8"></script>
 
 <script type="text/javascript">
+
     //myChart是外省流向贵州的图，chart2是贵州流向外省的图
     $(function () {
+
         var myChart = echarts.init(document.getElementById('heatmapChart'));
         myChart.setOption({
             title: {
@@ -640,6 +642,7 @@
 
         // 将 markers 添加到地图
         map3.add([viaMarker, startMarker]);
+
 
     });
 
