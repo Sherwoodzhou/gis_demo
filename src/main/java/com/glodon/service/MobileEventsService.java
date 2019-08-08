@@ -1,7 +1,7 @@
 package com.glodon.service;
 
-import com.glodon.Bean.BO.GisModel;
-import com.glodon.Bean.MobileEvents;
+import com.glodon.bean.BO.GisModel;
+import com.glodon.bean.MobileEvents;
 import com.glodon.mapper.MobileEventsDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Transactional
+//@Transactional
 @Service
 public class MobileEventsService {
     @Autowired

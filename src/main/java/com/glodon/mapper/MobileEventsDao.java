@@ -1,7 +1,7 @@
 package com.glodon.mapper;
 
-import com.glodon.Bean.BO.GisModel;
-import com.glodon.Bean.MobileEvents;
+import com.glodon.bean.BO.GisModel;
+import com.glodon.bean.MobileEvents;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;

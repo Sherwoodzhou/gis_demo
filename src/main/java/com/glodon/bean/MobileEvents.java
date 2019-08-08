@@ -1,4 +1,4 @@
-package com.glodon.Bean;
+package com.glodon.bean;
 
 import java.io.Serializable;
 

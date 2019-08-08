@@ -1,7 +1,7 @@
 package com.glodon;
 
 import com.csvreader.CsvReader;
-import com.glodon.Bean.MobileEvents;
+import com.glodon.bean.MobileEvents;
 import com.glodon.service.MobileEventsService;
 import com.glodon.util.JSONUtil;
 import org.springframework.beans.factory.annotation.Autowired;

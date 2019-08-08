@@ -1,6 +1,6 @@
 package com.glodon.config;
 
-import com.glodon.Bean.MyInterceptor;
+import com.glodon.bean.MyInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;

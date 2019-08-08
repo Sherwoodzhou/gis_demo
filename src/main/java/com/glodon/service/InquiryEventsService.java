@@ -1,6 +1,6 @@
 package com.glodon.service;
 
-import com.glodon.Bean.BO.GisModel;
+import com.glodon.bean.BO.GisModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

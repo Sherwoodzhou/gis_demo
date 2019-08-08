@@ -1,8 +1,8 @@
 package com.glodon.mapper;
 
-import com.glodon.Bean.BO.CityGisModel;
-import com.glodon.Bean.BO.GisModel;
-import com.glodon.Bean.DangerousHouse;
+import com.glodon.bean.BO.CityGisModel;
+import com.glodon.bean.BO.GisModel;
+import com.glodon.bean.DangerousHouse;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;

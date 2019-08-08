@@ -1,7 +1,7 @@
 package com.glodon.service;
 
 import com.csvreader.CsvReader;
-import com.glodon.Bean.DangerousHouse;
+import com.glodon.bean.DangerousHouse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package com.glodon.controller;
 
-import com.glodon.Bean.BO.CityGisModel;
-import com.glodon.Bean.BO.GisModel;
+import com.glodon.bean.BO.CityGisModel;
+import com.glodon.bean.BO.GisModel;
 import com.glodon.service.InquiryHouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,12 +14,12 @@ import java.util.List;
 @RequestMapping("/inquiry")
 public class InquiryController {
 
-    @Autowired
-    private InquiryHouseService inquiryHouseService;
+     @Autowired
+     private InquiryHouseService inquiryHouseService;
 
-    /**
-     * 查询文件，并返回热力图
-     *
+     /**
+      * 查询文件，并返回热力图
+      *
      * @return
      */
     @RequestMapping("heatmap")

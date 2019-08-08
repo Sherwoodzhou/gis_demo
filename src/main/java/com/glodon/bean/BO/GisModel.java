@@ -1,12 +1,16 @@
-package com.glodon.Bean.BO;
+package com.glodon.bean.BO;
+
 
 import java.io.Serializable;
 
-public class CityGisModel implements Serializable {
+/**
+ * gis的经纬度信息
+ */
+public class GisModel implements Serializable {
+
     private Float lng;
     private Float lat;
     private int count;
-    private String address;
 
     public Float getLng() {
         return lng;
@@ -32,21 +36,12 @@ public class CityGisModel implements Serializable {
         this.count = count;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     @Override
     public String toString() {
-        return "CityGisModel{" +
+        return "{" +
                 "lng=" + lng +
                 ", lat=" + lat +
                 ", count=" + count +
-                ", city='" + address + '\'' +
                 '}';
     }
 }
