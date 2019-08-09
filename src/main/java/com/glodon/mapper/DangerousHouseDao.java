@@ -3,12 +3,11 @@ package com.glodon.mapper;
 import com.glodon.bean.BO.CityGisModel;
 import com.glodon.bean.BO.GisModel;
 import com.glodon.bean.DangerousHouse;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.InsertProvider;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.text.MessageFormat;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,6 +29,10 @@ public interface DangerousHouseDao {
 
     @Select("select `longitude` as `lng`,`latitude` as `lat`,`count`,`address` from dangerousHouse")
     List<CityGisModel> selectCityDir();
+
+    @Select("select `longitude` as `lng`,`latitude` as `lat`,`count`,`address` from dangerousHouse")
+    List<HashMap<String,Object>>selectForMap();
+
 
     /**
      * 批量插入

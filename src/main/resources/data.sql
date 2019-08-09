@@ -16,7 +16,7 @@ create table `dangerousHouse`(
 `zip_code` int(15),`address` varchar (30),`count` int (30),`longitude` float (15),	`latitude` float (15)
 );
 
-CREATE TABLE `dangeroushouse` (
+CREATE TABLE `dangerousHouse` (
   `zip_code` int(15) NOT NULL,
   `address` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `count` int(30) NOT NULL,

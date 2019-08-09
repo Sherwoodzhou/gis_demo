@@ -5,10 +5,13 @@ import com.glodon.bean.BO.GisModel;
 import com.glodon.bean.DangerousHouse;
 import com.glodon.bean.annotation.Master;
 import com.glodon.mapper.DangerousHouseDao;
+import com.glodon.mapper.DynamicDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 //@Transactional
@@ -16,6 +19,8 @@ import java.util.List;
 public class DangerousHouseService {
     @Autowired
     private DangerousHouseDao dangerousHouseDao;
+    @Autowired
+    private DynamicDao dynamicDao;
 
 
     /**
@@ -50,8 +55,15 @@ public class DangerousHouseService {
 
 
     public List<CityGisModel> inqueryCityDangerousHouse() {
-        {
             return dangerousHouseDao.selectCityDir();
-        }
+    }
+
+    /**
+     * 测试map存储
+     * @return
+     */
+    public List<HashMap<String,Object>> selectForMap(String column,String table){
+        System.out.println(column);
+        return dynamicDao.selectForMap(column,table);
     }
 }

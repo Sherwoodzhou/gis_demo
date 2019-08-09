@@ -2,12 +2,15 @@ package com.glodon.controller;
 
 import com.glodon.bean.BO.CityGisModel;
 import com.glodon.bean.BO.GisModel;
+import com.glodon.service.DangerousHouseService;
 import com.glodon.service.InquiryHouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -16,6 +19,8 @@ public class InquiryController {
 
      @Autowired
      private InquiryHouseService inquiryHouseService;
+     @Autowired
+     private DangerousHouseService dangerousHouseService;
 
      /**
       * 查询文件，并返回热力图
@@ -103,4 +108,19 @@ public class InquiryController {
         return mv;
     }
 
+
+    /**
+     * 测试map存储，动态传参
+     * @return
+     */
+    @RequestMapping(value = "map")
+    @ResponseBody
+    public List<HashMap<String,Object>> selectForMap(@RequestParam("column") String column,@RequestParam("table")String table) {
+        System.out.println(column);
+        List<HashMap<String,Object>> dir = dangerousHouseService.selectForMap(column,table);
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("index");
+       // mv.addObject("s",dir);
+        return dir;
+    }
 }
