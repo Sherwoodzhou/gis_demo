@@ -19,8 +19,6 @@ import java.util.List;
 public class DangerousHouseService {
     @Autowired
     private DangerousHouseDao dangerousHouseDao;
-    @Autowired
-    private DynamicDao dynamicDao;
 
 
     /**
@@ -33,6 +31,7 @@ public class DangerousHouseService {
     public int addDangerousHouse(DangerousHouse dangerousHouse) {
         return dangerousHouseDao.addHouseBean(dangerousHouse);
     }
+
     @Master
     public int batchInsert(List<DangerousHouse> batch) {
         return dangerousHouseDao.batchInsert(batch);
@@ -55,15 +54,8 @@ public class DangerousHouseService {
 
 
     public List<CityGisModel> inqueryCityDangerousHouse() {
-            return dangerousHouseDao.selectCityDir();
+        return dangerousHouseDao.selectCityDir();
     }
 
-    /**
-     * 测试map存储
-     * @return
-     */
-    public List<HashMap<String,Object>> selectForMap(String column,String table){
-        System.out.println(column);
-        return dynamicDao.selectForMap(column,table);
-    }
+
 }

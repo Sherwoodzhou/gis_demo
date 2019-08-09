@@ -2,14 +2,13 @@ package com.glodon.controller;
 
 import com.glodon.bean.BO.CityGisModel;
 import com.glodon.bean.BO.GisModel;
-import com.glodon.service.DangerousHouseService;
+import com.glodon.service.DynamicService;
 import com.glodon.service.InquiryHouseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -17,14 +16,14 @@ import java.util.List;
 @RequestMapping("/inquiry")
 public class InquiryController {
 
-     @Autowired
-     private InquiryHouseService inquiryHouseService;
-     @Autowired
-     private DangerousHouseService dangerousHouseService;
+    @Autowired
+    private InquiryHouseService inquiryHouseService;
+    @Autowired
+    private DynamicService dynamicService;
 
-     /**
-      * 查询文件，并返回热力图
-      *
+    /**
+     * 查询文件，并返回热力图
+     *
      * @return
      */
     @RequestMapping("heatmap")
@@ -48,10 +47,6 @@ public class InquiryController {
     @RequestMapping(value = "gridlayer")
     @ResponseBody
     public ModelAndView inquiryGridLayer() {
-/*        List<GisModel> dir = inquiryHouseService.   inquiryDir();
-        for (GisModel gisModle : dir) {
-            System.out.println(gisModle);
-        }*/
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mGis/gridlayer");
         return mv;
@@ -59,6 +54,7 @@ public class InquiryController {
 
     /**
      * loca柱状图
+     *
      * @return
      */
     @RequestMapping(value = "loca")
@@ -76,51 +72,41 @@ public class InquiryController {
 
     /**
      * 飞线图
+     *
      * @return
      */
     @RequestMapping(value = "flyline")
     @ResponseBody
     public ModelAndView inquiryFlyLine() {
-/*        List<CityGisModel> dir = inquiryHouseService.inquiryCityDir();
-        for (CityGisModel gisModle : dir) {
-            System.out.println(gisModle);
-        }*/
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mGis/flylinemap");
-        //mv.addObject("heatmapData", dir);
         return mv;
     }
 
     /**
      * 气泡图
+     *
      * @return
      */
     @RequestMapping(value = "paomap")
     @ResponseBody
     public ModelAndView inquiryPaoMap() {
-/*        List<CityGisModel> dir = inquiryHouseService.inquiryCityDir();
-        for (CityGisModel gisModle : dir) {
-            System.out.println(gisModle);
-        }*/
         ModelAndView mv = new ModelAndView();
         mv.setViewName("mGis/paomap");
-        //mv.addObject("heatmapData", dir);
         return mv;
     }
 
 
     /**
-     * 测试map存储，动态传参
+     * 动态传参,使用map传递参数
+     *
      * @return
      */
-    @RequestMapping(value = "map")
+    @RequestMapping(value = "dynamic")
     @ResponseBody
-    public List<HashMap<String,Object>> selectForMap(@RequestParam("column") String column,@RequestParam("table")String table) {
+    public List<HashMap<String, Object>> selectForMap(@RequestParam("column") String column, @RequestParam("table") String table) {
         System.out.println(column);
-        List<HashMap<String,Object>> dir = dangerousHouseService.selectForMap(column,table);
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("index");
-       // mv.addObject("s",dir);
+        List<HashMap<String, Object>> dir = dynamicService.selectForMap(column, table);
         return dir;
     }
 }
