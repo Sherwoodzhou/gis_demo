@@ -27,9 +27,9 @@ public class UploadEventsService {
                 dir.mkdirs();
                 file.createNewFile();
 
-            FileOutputStream outStream = new FileOutputStream(file); //文件输出流将数据写入文件
-            outStream.write(sourceByte);
-            outStream.close();
+                FileOutputStream outStream = new FileOutputStream(file); //文件输出流将数据写入文件
+                outStream.write(sourceByte);
+                outStream.close();
             }
             //System.out.println("存储路径"+path+"\\"+fileName);
         } catch (IOException e) {
