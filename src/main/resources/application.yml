@@ -29,4 +29,3 @@ logging:
   file: my.log   #要制定日志所记录的范围
   level:
     root: info
-sharding:

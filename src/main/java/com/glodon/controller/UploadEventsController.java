@@ -44,6 +44,11 @@ public class UploadEventsController {
         return mv;
     }
 
+    /**
+     * 动态建表，并插入数据
+     * @param file
+     * @return
+     */
     @PostMapping("/dynamic")
     /*    @ResponseBody*//*这里不需要*/
     public ModelAndView uploadDynamicCsv(@RequestParam("file") MultipartFile file) {

@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -16,11 +17,34 @@ import java.util.List;
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {
 
+    /**
+     * 跨域
+     *
+     * @param registry
+     */
+    public void addCorsMappings(CorsRegistry registry) {
+/*        registry.addMapping("/upload/**")//对/api/**进行跨域配置
+                .allowedHeaders("**")//允许所有的非简单请求头
+                .allowedMethods("GET", "OPTIONS", "POST") //允许三种方法
+                .allowedOrigins("*");//允许来自所有域的请求*/
+        registry.addMapping("/**")//对/api/**进行跨域配置
+                .allowedHeaders("*")//允许所有的非简单请求头
+                .allowedMethods("GET", "OPTIONS", "POST") //允许三种方法
+                .allowedOrigins("*");//允许来自所有域的请求
+
+    }
+
+    /**
+     * 设置拦截器
+     *
+     * @return
+     */
     @Bean
-    MyInterceptor myInterceptor(){
+    MyInterceptor myInterceptor() {
         return new MyInterceptor();
     }
-    public void addInterceptors(InterceptorRegistry registry){
+
+    public void addInterceptors(InterceptorRegistry registry) {
         List exclude = new ArrayList();//不拦截的列表
         exclude.add("/js/**");
         exclude.add("/templates/**");
@@ -31,11 +55,12 @@ public class MyMvcConfig implements WebMvcConfigurer {
 
     /**
      * springmvc视图解析
-     * @Title: viewResolver
+     *
      * @return
+     * @Title: viewResolver
      */
     @Bean
-    public InternalResourceViewResolver viewResolver(){
+    public InternalResourceViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setPrefix("classpath:/tempaltes/");
         viewResolver.setSuffix(".html");
