@@ -22,17 +22,21 @@ public class MyMvcConfig implements WebMvcConfigurer {
      *
      * @param registry
      */
+
     public void addCorsMappings(CorsRegistry registry) {
-/*        registry.addMapping("/upload/**")//对/api/**进行跨域配置
-                .allowedHeaders("**")//允许所有的非简单请求头
-                .allowedMethods("GET", "OPTIONS", "POST") //允许三种方法
-                .allowedOrigins("*");//允许来自所有域的请求*/
+
+//        registry.addMapping("/upload/**")//对/api/**进行跨域配置
+//                .allowedHeaders("**")//允许所有的非简单请求头
+//                .allowedMethods("GET", "OPTIONS", "POST") //允许三种方法
+//                .allowedOrigins("*");//允许来自所有域的请求*//*
+
         registry.addMapping("/**")//对/api/**进行跨域配置
                 .allowedHeaders("*")//允许所有的非简单请求头
                 .allowedMethods("GET", "OPTIONS", "POST") //允许三种方法
                 .allowedOrigins("*");//允许来自所有域的请求
 
     }
+
 
     /**
      * 设置拦截器

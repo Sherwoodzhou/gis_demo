@@ -1,19 +1,47 @@
-2019-08-14 14:25:45.210  INFO 13004 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 13004 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 14:25:45.215  INFO 13004 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 14:25:46.874  INFO 13004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 14:25:46.888  INFO 13004 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 14:25:46.888  INFO 13004 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 14:25:46.968  INFO 13004 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 14:25:46.969  INFO 13004 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1619 ms
-2019-08-14 14:25:48.217  INFO 13004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 14:25:48.400  INFO 13004 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 14:25:48.687  INFO 13004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 14:25:48.689  INFO 13004 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.858 seconds (JVM running for 4.546)
-2019-08-14 14:29:43.325  INFO 13004 --- [http-nio-10000-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 14:29:43.325  INFO 13004 --- [http-nio-10000-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 14:29:43.339  INFO 13004 --- [http-nio-10000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
-2019-08-14 14:29:43.365  INFO 13004 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 14:30:04.513 ERROR 13004 --- [http-nio-10000-exec-3] o.a.tomcat.jdbc.pool.ConnectionPool      : Unable to create initial connections of pool.
+2019-08-16 11:14:12.524  INFO 12452 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 12452 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
+2019-08-16 11:14:12.530  INFO 12452 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
+2019-08-16 11:14:14.294  INFO 12452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2019-08-16 11:14:14.324  INFO 12452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-16 11:14:14.324  INFO 12452 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-16 11:14:14.387  INFO 12452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-16 11:14:14.387  INFO 12452 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1811 ms
+2019-08-16 11:14:15.592  INFO 12452 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-16 11:14:15.782  INFO 12452 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-16 11:14:16.050  INFO 12452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2019-08-16 11:14:16.052  INFO 12452 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.886 seconds (JVM running for 4.647)
+2019-08-16 14:33:35.749  INFO 12452 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-16 14:33:35.749  INFO 12452 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-16 14:33:35.763  INFO 12452 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-08-16 14:33:35.784  WARN 12452 --- [http-nio-10000-exec-1] o.s.web.servlet.PageNotFound             : No mapping for OPTIONS /inquiry
+2019-08-16 14:33:35.792  INFO 12452 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /error
+2019-08-16 14:33:35.802  INFO 12452 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /error
+2019-08-16 14:33:38.723  WARN 12452 --- [http-nio-10000-exec-3] o.s.web.servlet.PageNotFound             : No mapping for OPTIONS /inquiry
+2019-08-16 14:33:38.724  INFO 12452 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /error
+2019-08-16 14:33:38.724  INFO 12452 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /error
+2019-08-16 14:33:39.394  WARN 12452 --- [http-nio-10000-exec-4] o.s.web.servlet.PageNotFound             : No mapping for OPTIONS /inquiry
+2019-08-16 14:33:39.396  INFO 12452 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /error
+2019-08-16 14:33:39.396  INFO 12452 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /error
+2019-08-16 14:33:59.869  INFO 13044 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 13044 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
+2019-08-16 14:33:59.872  INFO 13044 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
+2019-08-16 14:34:00.898  INFO 13044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
+2019-08-16 14:34:00.913  INFO 13044 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-16 14:34:00.913  INFO 13044 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-16 14:34:00.979  INFO 13044 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-16 14:34:00.979  INFO 13044 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1076 ms
+2019-08-16 14:34:02.165  INFO 13044 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-16 14:34:02.365  INFO 13044 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-16 14:34:02.664  INFO 13044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
+2019-08-16 14:34:02.666  INFO 13044 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.074 seconds (JVM running for 3.542)
+2019-08-16 14:34:14.015  INFO 13044 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-16 14:34:14.015  INFO 13044 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-16 14:34:14.026  INFO 13044 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-08-16 14:34:14.034  WARN 13044 --- [http-nio-10000-exec-1] o.s.web.servlet.PageNotFound             : No mapping for OPTIONS /inquiry
+2019-08-16 14:34:14.041  INFO 13044 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /error
+2019-08-16 14:34:14.049  INFO 13044 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /error
+2019-08-16 14:37:05.594  INFO 13044 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:37:05.594  INFO 13044 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:37:05.654  INFO 13044 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:37:26.795 ERROR 13044 --- [http-nio-10000-exec-2] o.a.tomcat.jdbc.pool.ConnectionPool      : Unable to create initial connections of pool.
 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
@@ -40,25 +68,21 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70) [mybatis-spring-1.3.0.jar:1.3.0]
 	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337) [mybatis-3.4.0.jar:3.4.0]
 	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) [mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49) [mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) [mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) [mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198) [mybatis-3.4.0.jar:3.4.0]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434) [mybatis-spring-1.3.0.jar:1.3.0]
-	at com.sun.proxy.$Proxy66.selectList(Unknown Source) [na:na]
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231) [mybatis-spring-1.3.0.jar:1.3.0]
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:128) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68) [mybatis-3.4.0.jar:3.4.0]
+	at com.sun.proxy.$Proxy66.update(Unknown Source) [na:na]
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:295) [mybatis-spring-1.3.0.jar:1.3.0]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59) [mybatis-3.4.0.jar:3.4.0]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53) [mybatis-3.4.0.jar:3.4.0]
-	at com.sun.proxy.$Proxy73.selectForMap(Unknown Source) [na:na]
-	at com.glodon.service.DynamicService.selectForMap(DynamicService.java:28) [classes/:na]
+	at com.sun.proxy.$Proxy73.createTable(Unknown Source) [na:na]
+	at com.glodon.service.DynamicService.createTable(DynamicService.java:34) [classes/:na]
 	at com.glodon.service.DynamicService$$FastClassBySpringCGLIB$$11a4def7.invoke(<generated>) [classes/:na]
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) [spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
@@ -68,8 +92,9 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at com.glodon.service.DynamicService$$EnhancerBySpringCGLIB$$6142eb11.selectForMap(<generated>) [classes/:na]
-	at com.glodon.controller.InquiryController.selectForMap(InquiryController.java:109) [classes/:na]
+	at com.glodon.service.DynamicService$$EnhancerBySpringCGLIB$$4766b688.createTable(<generated>) [classes/:na]
+	at com.glodon.service.SaveDynamicCsvToDatabaseService.saveToDatabase(SaveDynamicCsvToDatabaseService.java:49) [classes/:na]
+	at com.glodon.controller.UploadEventsController.uploadDynamicCsv(UploadEventsController.java:58) [classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
@@ -83,8 +108,8 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) [tomcat-embed-core-9.0.21.jar:9.0.21]
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.21.jar:9.0.21]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.21.jar:9.0.21]
@@ -139,7 +164,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.11.jar:8.0.11]
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:982) ~[mysql-connector-java-8.0.11.jar:8.0.11]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:852) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	... 103 common frames omitted
+	... 100 common frames omitted
 Caused by: java.net.ConnectException: Connection timed out: connect
 	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_191]
 	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_191]
@@ -151,667 +176,69 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_191]
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:173) ~[mysql-connector-java-8.0.11.jar:8.0.11]
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:66) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	... 106 common frames omitted
-
-2019-08-14 14:30:04.525  INFO 13004 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 14:30:04.526 ERROR 13004 --- [http-nio-10000-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
-### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-### The error may exist in com/glodon/mapper/DynamicDao.java (best guess)
-### The error may involve com.glodon.mapper.DynamicDao.selectForMap
-### The error occurred while executing a query
-### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] with root cause
-
-java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_191]
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_191]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_191]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_191]
-	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_191]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:173) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:66) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:982) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:852) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:307) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:200) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:708) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:642) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:464) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:141) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:115) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:102) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:126) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:164) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:84) ~[mybatis-spring-1.3.0.jar:1.3.0]
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70) ~[mybatis-spring-1.3.0.jar:1.3.0]
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) ~[mybatis-3.4.0.jar:3.4.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434) ~[mybatis-spring-1.3.0.jar:1.3.0]
-	at com.sun.proxy.$Proxy66.selectList(Unknown Source) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231) ~[mybatis-spring-1.3.0.jar:1.3.0]
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:128) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53) ~[mybatis-3.4.0.jar:3.4.0]
-	at com.sun.proxy.$Proxy73.selectForMap(Unknown Source) ~[na:na]
-	at com.glodon.service.DynamicService.selectForMap(DynamicService.java:28) ~[classes/:na]
-	at com.glodon.service.DynamicService$$FastClassBySpringCGLIB$$11a4def7.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at com.glodon.service.DynamicService$$EnhancerBySpringCGLIB$$6142eb11.selectForMap(<generated>) ~[classes/:na]
-	at com.glodon.controller.InquiryController.selectForMap(InquiryController.java:109) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
-
-2019-08-14 14:30:04.535  INFO 13004 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /error
-2019-08-14 14:30:04.596  INFO 13004 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /error
-2019-08-14 14:30:08.074  INFO 3136 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 3136 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 14:30:08.076  INFO 3136 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 14:30:09.187  INFO 3136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 14:30:09.202  INFO 3136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 14:30:09.202  INFO 3136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 14:30:09.269  INFO 3136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 14:30:09.270  INFO 3136 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1160 ms
-2019-08-14 14:30:10.460  INFO 3136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 14:30:10.661  INFO 3136 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 14:30:10.949  INFO 3136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 14:30:10.951  INFO 3136 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.137 seconds (JVM running for 3.87)
-2019-08-14 14:30:14.457  INFO 3136 --- [http-nio-10000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 14:30:14.458  INFO 3136 --- [http-nio-10000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 14:30:14.471  INFO 3136 --- [http-nio-10000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2019-08-14 14:30:14.479  INFO 3136 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 14:30:35.581 ERROR 3136 --- [http-nio-10000-exec-2] o.a.tomcat.jdbc.pool.ConnectionPool      : Unable to create initial connections of pool.
-
-com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:172) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:862) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:307) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:200) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:708) [tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:642) [tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:464) [tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:141) [tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:115) [tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:102) [tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:126) [tomcat-jdbc-8.0.32.jar:na]
-	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:164) [spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) [spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) [spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:84) [mybatis-spring-1.3.0.jar:1.3.0]
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70) [mybatis-spring-1.3.0.jar:1.3.0]
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) [mybatis-3.4.0.jar:3.4.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434) [mybatis-spring-1.3.0.jar:1.3.0]
-	at com.sun.proxy.$Proxy66.selectList(Unknown Source) [na:na]
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231) [mybatis-spring-1.3.0.jar:1.3.0]
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:128) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68) [mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53) [mybatis-3.4.0.jar:3.4.0]
-	at com.sun.proxy.$Proxy73.selectForMap(Unknown Source) [na:na]
-	at com.glodon.service.DynamicService.selectForMap(DynamicService.java:28) [classes/:na]
-	at com.glodon.service.DynamicService$$FastClassBySpringCGLIB$$11a4def7.invoke(<generated>) [classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) [spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) [spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at com.glodon.service.DynamicService$$EnhancerBySpringCGLIB$$53d7b3fe.selectForMap(<generated>) [classes/:na]
-	at com.glodon.controller.InquiryController.selectForMap(InquiryController.java:109) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) [spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) [spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) [spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) [spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) [spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) [spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) [spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_191]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_191]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:59) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:103) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:92) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:982) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:852) ~[mysql-connector-java-8.0.11.jar:8.0.11]
 	... 103 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_191]
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_191]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_191]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_191]
-	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_191]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:173) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:66) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	... 106 common frames omitted
 
-2019-08-14 14:30:35.592  INFO 3136 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 14:30:35.594 ERROR 3136 --- [http-nio-10000-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
-### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-### The error may exist in com/glodon/mapper/DynamicDao.java (best guess)
-### The error may involve com.glodon.mapper.DynamicDao.selectForMap
-### The error occurred while executing a query
-### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] with root cause
-
-java.net.ConnectException: Connection timed out: connect
-	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_191]
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_191]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_191]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_191]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_191]
-	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_191]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:173) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:66) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:982) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:852) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:230) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:226) ~[mysql-connector-java-8.0.11.jar:8.0.11]
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:307) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:200) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:708) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:642) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:464) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:141) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:115) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:102) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:126) ~[tomcat-jdbc-8.0.32.jar:na]
-	at org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:164) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77) ~[spring-jdbc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:84) ~[mybatis-spring-1.3.0.jar:1.3.0]
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:70) ~[mybatis-spring-1.3.0.jar:1.3.0]
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:84) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141) ~[mybatis-3.4.0.jar:3.4.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434) ~[mybatis-spring-1.3.0.jar:1.3.0]
-	at com.sun.proxy.$Proxy66.selectList(Unknown Source) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231) ~[mybatis-spring-1.3.0.jar:1.3.0]
-	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:128) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:68) ~[mybatis-3.4.0.jar:3.4.0]
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53) ~[mybatis-3.4.0.jar:3.4.0]
-	at com.sun.proxy.$Proxy73.selectForMap(Unknown Source) ~[na:na]
-	at com.glodon.service.DynamicService.selectForMap(DynamicService.java:28) ~[classes/:na]
-	at com.glodon.service.DynamicService$$FastClassBySpringCGLIB$$11a4def7.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at com.glodon.service.DynamicService$$EnhancerBySpringCGLIB$$53d7b3fe.selectForMap(<generated>) ~[classes/:na]
-	at com.glodon.controller.InquiryController.selectForMap(InquiryController.java:109) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_191]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_191]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_191]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_191]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_191]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_191]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_191]
-
-2019-08-14 14:30:35.602  INFO 3136 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /error
-2019-08-14 14:30:35.645  INFO 3136 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /error
-2019-08-14 14:31:20.829  INFO 3136 --- [http-nio-10000-exec-8] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 14:31:21.104  INFO 3136 --- [http-nio-10000-exec-8] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 14:31:22.850  INFO 3136 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 14:31:23.107  INFO 3136 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 16:38:28.707  INFO 7648 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 7648 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 16:38:28.709  INFO 7648 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 16:38:29.747  INFO 7648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 16:38:29.761  INFO 7648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 16:38:29.761  INFO 7648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 16:38:29.827  INFO 7648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 16:38:29.827  INFO 7648 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1088 ms
-2019-08-14 16:38:31.039  INFO 7648 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 16:38:31.243  INFO 7648 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 16:38:31.552  INFO 7648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 16:38:31.553  INFO 7648 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.108 seconds (JVM running for 3.673)
-2019-08-14 16:58:46.020  INFO 7648 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 16:58:46.021  INFO 7648 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 16:58:46.033  INFO 7648 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2019-08-14 16:58:46.048  INFO 7648 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 16:58:46.068  INFO 7648 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 16:59:06.010  INFO 7648 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 16:59:06.011  INFO 7648 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 16:59:08.537  INFO 7648 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 16:59:08.538  INFO 7648 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:00:31.617  INFO 7648 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:00:31.618  INFO 7648 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:01:21.884  INFO 7648 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:01:21.886  INFO 7648 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:17:58.094  INFO 15500 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 15500 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:17:58.096  INFO 15500 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:17:59.179  INFO 15500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:17:59.194  INFO 15500 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:17:59.194  INFO 15500 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:17:59.264  INFO 15500 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:17:59.264  INFO 15500 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1140 ms
-2019-08-14 17:18:00.484  INFO 15500 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:18:00.688  INFO 15500 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:18:00.996  INFO 15500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:18:00.998  INFO 15500 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.192 seconds (JVM running for 3.662)
-2019-08-14 17:19:00.017  INFO 15500 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 17:19:00.017  INFO 15500 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 17:19:00.028  INFO 15500 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
-2019-08-14 17:19:00.037  INFO 15500 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:19:00.037  INFO 15500 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:19:00.047  INFO 15500 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:19:00.047  INFO 15500 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:19:04.813  INFO 15500 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:19:04.814  INFO 15500 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:19:07.873  INFO 15500 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:19:07.874  INFO 15500 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:19:39.578  INFO 15500 --- [http-nio-10000-exec-9] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:19:39.879  INFO 15500 --- [http-nio-10000-exec-9] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:20:44.373  INFO 15500 --- [http-nio-10000-exec-10] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:20:44.373  INFO 15500 --- [http-nio-10000-exec-10] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:20:55.326  INFO 15500 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:20:55.499  INFO 15500 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:21:00.478  INFO 15500 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:21:00.484  INFO 15500 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:21:03.836  INFO 15500 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:21:03.840  INFO 15500 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:21:29.541  INFO 15500 --- [http-nio-10000-exec-9] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:21:29.544  INFO 15500 --- [http-nio-10000-exec-9] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:23:42.923  INFO 15500 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:23:42.925  INFO 15500 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:26:50.997  INFO 9132 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 9132 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:26:50.999  INFO 9132 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:26:52.026  INFO 9132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:26:52.040  INFO 9132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:26:52.040  INFO 9132 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:26:52.106  INFO 9132 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:26:52.107  INFO 9132 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1079 ms
-2019-08-14 17:26:53.313  INFO 9132 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:26:53.514  INFO 9132 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:26:53.820  INFO 9132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:26:53.822  INFO 9132 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.101 seconds (JVM running for 3.567)
-2019-08-14 17:27:43.939  INFO 9132 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 17:27:43.940  INFO 9132 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 17:27:43.952  INFO 9132 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2019-08-14 17:27:43.960  INFO 9132 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:27:43.970  INFO 9132 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:27:44.003  INFO 9132 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:27:44.316  INFO 9132 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:32:12.809  INFO 15736 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 15736 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:32:12.811  INFO 15736 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:32:13.872  INFO 15736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:32:13.886  INFO 15736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:32:13.886  INFO 15736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:32:13.952  INFO 15736 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:32:13.952  INFO 15736 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1112 ms
-2019-08-14 17:32:15.147  INFO 15736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:32:15.352  INFO 15736 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:32:15.659  INFO 15736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:32:15.661  INFO 15736 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.123 seconds (JVM running for 3.603)
-2019-08-14 17:32:22.163  INFO 15736 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 17:32:22.163  INFO 15736 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 17:32:22.175  INFO 15736 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2019-08-14 17:32:22.184  INFO 15736 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:32:22.500  INFO 15736 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:32:25.278  INFO 15736 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:32:25.412  INFO 15736 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:33:04.197  INFO 15736 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:33:04.202  INFO 15736 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:36:21.201  INFO 8796 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 8796 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:36:21.203  INFO 8796 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:36:22.241  INFO 8796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:36:22.255  INFO 8796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:36:22.256  INFO 8796 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:36:22.322  INFO 8796 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:36:22.322  INFO 8796 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1091 ms
-2019-08-14 17:36:23.521  INFO 8796 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:36:23.725  INFO 8796 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:36:24.032  INFO 8796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:36:24.034  INFO 8796 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.097 seconds (JVM running for 3.558)
-2019-08-14 17:36:24.151  INFO 8796 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 17:36:24.152  INFO 8796 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 17:36:24.164  INFO 8796 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2019-08-14 17:36:24.173  INFO 8796 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:36:24.184  INFO 8796 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:36:48.446  INFO 8796 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:36:48.446  INFO 8796 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:37:33.408  INFO 15740 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 15740 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:37:33.410  INFO 15740 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:37:34.424  INFO 15740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:37:34.438  INFO 15740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:37:34.439  INFO 15740 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:37:34.503  INFO 15740 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:37:34.503  INFO 15740 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1065 ms
-2019-08-14 17:37:35.697  INFO 15740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:37:35.900  INFO 15740 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:37:36.207  INFO 15740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:37:36.208  INFO 15740 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.056 seconds (JVM running for 3.531)
-2019-08-14 17:37:57.710  INFO 15740 --- [http-nio-10000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 17:37:57.710  INFO 15740 --- [http-nio-10000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 17:37:57.722  INFO 15740 --- [http-nio-10000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2019-08-14 17:37:57.730  INFO 15740 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:37:58.060  INFO 15740 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:38:02.243  INFO 15740 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:38:02.248  INFO 15740 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:38:37.353  INFO 14144 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 14144 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:38:37.355  INFO 14144 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:38:38.397  INFO 14144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:38:38.411  INFO 14144 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:38:38.411  INFO 14144 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:38:38.477  INFO 14144 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:38:38.477  INFO 14144 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1094 ms
-2019-08-14 17:38:39.674  INFO 14144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:38:39.878  INFO 14144 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:38:40.184  INFO 14144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:38:40.186  INFO 14144 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.097 seconds (JVM running for 3.565)
-2019-08-14 17:38:43.952  INFO 14144 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 17:38:43.953  INFO 14144 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 17:38:43.965  INFO 14144 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2019-08-14 17:38:43.973  INFO 14144 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:38:44.221  INFO 14144 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:39:58.743  INFO 14144 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:39:58.749  INFO 14144 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:42:07.475  INFO 13004 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 13004 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:42:07.478  INFO 13004 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:42:08.521  INFO 13004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:42:08.535  INFO 13004 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:42:08.536  INFO 13004 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:42:08.601  INFO 13004 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:42:08.601  INFO 13004 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1093 ms
-2019-08-14 17:42:09.805  INFO 13004 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:42:10.011  INFO 13004 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:42:10.321  INFO 13004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:42:10.323  INFO 13004 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.121 seconds (JVM running for 3.597)
-2019-08-14 17:42:42.083  INFO 13004 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 17:42:42.083  INFO 13004 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 17:42:42.095  INFO 13004 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2019-08-14 17:42:42.104  INFO 13004 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:42:42.114  INFO 13004 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:42:51.991  INFO 13004 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:42:51.992  INFO 13004 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:44:45.771  INFO 9872 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 9872 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:44:45.773  INFO 9872 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:44:46.813  INFO 9872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:44:46.828  INFO 9872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:44:46.828  INFO 9872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:44:46.893  INFO 9872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:44:46.893  INFO 9872 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1092 ms
-2019-08-14 17:44:48.099  INFO 9872 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:44:48.314  INFO 9872 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:44:48.627  INFO 9872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:44:48.630  INFO 9872 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.121 seconds (JVM running for 3.585)
-2019-08-14 17:45:08.068  INFO 9872 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 17:45:08.068  INFO 9872 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 17:45:08.080  INFO 9872 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
-2019-08-14 17:45:08.088  INFO 9872 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:45:08.361  INFO 9872 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:45:36.564  INFO 9872 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:45:36.787  INFO 9872 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:45:54.569  INFO 6344 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 6344 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:45:54.571  INFO 6344 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:45:55.608  INFO 6344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:45:55.622  INFO 6344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:45:55.622  INFO 6344 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:45:55.688  INFO 6344 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:45:55.688  INFO 6344 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1087 ms
-2019-08-14 17:45:56.888  INFO 6344 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:45:57.080  INFO 6344 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:45:57.374  INFO 6344 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:45:57.376  INFO 6344 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.068 seconds (JVM running for 3.542)
-2019-08-14 17:45:59.539  INFO 6344 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 17:45:59.539  INFO 6344 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 17:45:59.552  INFO 6344 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2019-08-14 17:45:59.561  INFO 6344 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:45:59.910  INFO 6344 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:46:02.843  INFO 6344 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:46:03.073  INFO 6344 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:46:04.603  INFO 6344 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:46:04.607  INFO 6344 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/dynamic
-2019-08-14 17:48:04.359  INFO 8656 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 8656 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:48:04.361  INFO 8656 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:48:05.413  INFO 8656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:48:05.428  INFO 8656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:48:05.428  INFO 8656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:48:05.496  INFO 8656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:48:05.496  INFO 8656 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1104 ms
-2019-08-14 17:48:06.717  INFO 8656 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:48:06.919  INFO 8656 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:48:07.229  INFO 8656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:48:07.231  INFO 8656 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.148 seconds (JVM running for 3.629)
-2019-08-14 17:48:16.857  INFO 14080 --- [main] com.glodon.GisApplication                : Starting GisApplication on DESKTOP-4645ELA with PID 14080 (D:\code\java\gis_demo\target\classes started by EDZ in D:\code\java\gis_demo)
-2019-08-14 17:48:16.859  INFO 14080 --- [main] com.glodon.GisApplication                : No active profile set, falling back to default profiles: default
-2019-08-14 17:48:17.917  INFO 14080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 10000 (http)
-2019-08-14 17:48:17.932  INFO 14080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-08-14 17:48:17.932  INFO 14080 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-08-14 17:48:18.000  INFO 14080 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-08-14 17:48:18.001  INFO 14080 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1112 ms
-2019-08-14 17:48:19.229  INFO 14080 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-08-14 17:48:19.435  INFO 14080 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-08-14 17:48:19.749  INFO 14080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 10000 (http) with context path ''
-2019-08-14 17:48:19.751  INFO 14080 --- [main] com.glodon.GisApplication                : Started GisApplication in 3.17 seconds (JVM running for 3.654)
-2019-08-14 18:25:39.161  INFO 14080 --- [http-nio-10000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-08-14 18:25:39.161  INFO 14080 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-08-14 18:25:39.177  INFO 14080 --- [http-nio-10000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
-2019-08-14 18:25:39.186  INFO 14080 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /
-2019-08-14 18:25:39.358  INFO 14080 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /
-2019-08-14 18:26:48.615  INFO 14080 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /
-2019-08-14 18:26:48.616  INFO 14080 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /
-2019-08-14 18:26:52.239  INFO 14080 --- [http-nio-10000-exec-10] com.glodon.bean.MyInterceptor            : /
-2019-08-14 18:26:52.240  INFO 14080 --- [http-nio-10000-exec-10] com.glodon.bean.MyInterceptor            : /
+2019-08-16 14:37:26.987  INFO 13044 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:53:11.043  INFO 13044 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:53:11.173  INFO 13044 --- [http-nio-10000-exec-6] o.s.jdbc.support.SQLErrorCodesFactory    : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2019-08-16 14:53:11.178  INFO 13044 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:53:39.283  INFO 13044 --- [http-nio-10000-exec-7] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:53:39.322  INFO 13044 --- [http-nio-10000-exec-7] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:55:29.639  INFO 13044 --- [http-nio-10000-exec-9] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:55:29.650  INFO 13044 --- [http-nio-10000-exec-9] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:59:05.041  INFO 13044 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:59:05.050  INFO 13044 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:59:20.808  INFO 13044 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 14:59:21.034  INFO 13044 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 15:09:10.213  INFO 13044 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/heatmap
+2019-08-16 15:09:10.267  INFO 13044 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/heatmap
+2019-08-16 15:09:32.203  INFO 13044 --- [http-nio-10000-exec-8] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:09:32.225  INFO 13044 --- [http-nio-10000-exec-8] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:09:35.860  INFO 13044 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:09:35.861  INFO 13044 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:10:02.033  INFO 13044 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:10:02.051  INFO 13044 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:10:10.494  INFO 13044 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:10:10.494  INFO 13044 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:11:14.170  INFO 13044 --- [http-nio-10000-exec-10] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:11:14.171  INFO 13044 --- [http-nio-10000-exec-10] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:11:29.851  INFO 13044 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:11:29.853  INFO 13044 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:11:33.462  INFO 13044 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:11:33.463  INFO 13044 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:11:37.861  INFO 13044 --- [http-nio-10000-exec-7] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:11:37.956  INFO 13044 --- [http-nio-10000-exec-7] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:11:45.646  INFO 13044 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:11:45.657  INFO 13044 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:11:55.224  INFO 13044 --- [http-nio-10000-exec-8] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:11:55.225  INFO 13044 --- [http-nio-10000-exec-8] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:12:14.528  INFO 13044 --- [http-nio-10000-exec-10] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:12:14.529  INFO 13044 --- [http-nio-10000-exec-10] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:12:18.050  INFO 13044 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:12:18.056  INFO 13044 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:12:23.264  INFO 13044 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:12:23.264  INFO 13044 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:13:07.508  INFO 13044 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:13:07.521  INFO 13044 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:13:11.522  INFO 13044 --- [http-nio-10000-exec-7] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:13:11.528  INFO 13044 --- [http-nio-10000-exec-7] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:13:34.368  INFO 13044 --- [http-nio-10000-exec-8] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:13:34.368  INFO 13044 --- [http-nio-10000-exec-8] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:14:07.185  INFO 13044 --- [http-nio-10000-exec-10] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:14:07.186  INFO 13044 --- [http-nio-10000-exec-10] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:14:14.938  INFO 13044 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:14:14.939  INFO 13044 --- [http-nio-10000-exec-5] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:15:31.560  INFO 13044 --- [http-nio-10000-exec-7] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:15:31.561  INFO 13044 --- [http-nio-10000-exec-7] com.glodon.bean.MyInterceptor            : /inquiry/flyline
+2019-08-16 15:15:35.310  INFO 13044 --- [http-nio-10000-exec-9] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:15:35.322  INFO 13044 --- [http-nio-10000-exec-9] com.glodon.bean.MyInterceptor            : /inquiry/loca
+2019-08-16 15:15:40.524  INFO 13044 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:15:40.524  INFO 13044 --- [http-nio-10000-exec-1] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:15:44.604  INFO 13044 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:15:44.605  INFO 13044 --- [http-nio-10000-exec-3] com.glodon.bean.MyInterceptor            : /inquiry/paomap
+2019-08-16 15:27:55.057  INFO 13044 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 15:27:55.058  INFO 13044 --- [http-nio-10000-exec-4] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 15:27:55.091  INFO 13044 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 15:27:55.099  INFO 13044 --- [http-nio-10000-exec-2] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 15:28:05.768  INFO 13044 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /upload/dynamic
+2019-08-16 15:28:05.782  INFO 13044 --- [http-nio-10000-exec-6] com.glodon.bean.MyInterceptor            : /upload/dynamic
