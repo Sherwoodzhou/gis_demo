@@ -26,16 +26,16 @@ public class InquiryController {
      *
      * @return
      */
-    @RequestMapping("heatmap")
+    @RequestMapping("info_overview")
     @ResponseBody
     public ModelAndView inquiryHeatMap() {
-        List<GisModel> dir = inquiryHouseService.inquiryDir();
+/*        List<GisModel> dir = inquiryHouseService.inquiryDir();
         for (GisModel gisModel : dir) {
             System.out.println(gisModel);
-        }
+        }*/
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("mGis/heatmap");
-        mv.addObject("heatmapData", dir);
+        mv.setViewName("mGis/info_overview");
+        //mv.addObject("heatmapData", dir);
         return mv;
     }
 
@@ -88,14 +88,54 @@ public class InquiryController {
      *
      * @return
      */
-    @RequestMapping(value = "paomap")
+    @RequestMapping(value = "archValue")
     @ResponseBody
     public ModelAndView inquiryPaoMap() {
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("mGis/paomap");
+        mv.setViewName("mGis/archValue");
         return mv;
     }
 
+    /**
+     * 企业分析
+     *
+     * @return
+     */
+    @RequestMapping(value = "capanalysis")
+    @ResponseBody
+    public ModelAndView inquiryCapAna() {
+        List<GisModel> dir = inquiryHouseService.inquiryDir();
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("mGis/capanalysis");
+        mv.addObject("heatmapData", dir);
+        return mv;
+    }
+
+    /**
+     * 两房分析
+     *
+     * @return
+     */
+    @RequestMapping(value = "house")
+    @ResponseBody
+    public ModelAndView inquiryHouse() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("mGis/house");
+        return mv;
+    }
+
+    /**
+     * 从业人员分析
+     *
+     * @return
+     */
+    @RequestMapping(value = "employee")
+    @ResponseBody
+    public ModelAndView inquiryEmployee() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("mGis/employee");
+        return mv;
+    }
 
     /**
      * 动态传参,使用map传递参数

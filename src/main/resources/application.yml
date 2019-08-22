@@ -8,24 +8,24 @@ spring:
       max-request-size: 200000000
   datasource:
     master:
-      url: jdbc:mysql://192.168.223.130:3306/glodon?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/gis_demo?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
       username: root
-      password: 123456
+      password: 123
       driver-class-name: com.mysql.cj.jdbc.Driver
     slave1:
-      url: jdbc:mysql://192.168.223.131:3306/glodon?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
-      username: root   # 只读账户
-      password: 123456
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/gis_demo?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+      username: root
+      password: 123
       driver-class-name: com.mysql.cj.jdbc.Driver
     slave2:
-      url: jdbc:mysql://192.168.223.133:3306/glodon?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
-      username: root   # 只读账户
-      password: 123456
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/gis_demo?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+      username: root
+      password: 123
       driver-class-name: com.mysql.cj.jdbc.Driver
 
   mvc:
     static-path-pattern: /static/**
 logging:
-  file: my.log   #要制定日志所记录的范围
+  file: my.log   # 要制定日志所记录的范围
   level:
     root: info

@@ -39,5 +39,4 @@ public class UploadEventsService {
         }
         return path + "\\" + fileName;
     }
-
 }

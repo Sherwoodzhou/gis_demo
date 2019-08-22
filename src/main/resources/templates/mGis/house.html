@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>两房分析</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&key=dcdb0102f9125cd8f4f5a470e7604dab&plugin=AMap.Scale,AMap.ToolBar"></script>
+    <script type="text/javascript" src="/static/js/echarts.min.js"></script>
+    <script type="text/javascript" src="/static/js/echarts-gl.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/china.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-extension-amap@latest/dist/echarts-extension-amap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/app2.css" />
+</head>
+
+<body class="bg05">
+<header class="header">
+    <h3>两房分析</h3>
+</header>
+
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="row fill-h">
+            <div class="col-lg-8 fill-h">
+                <div class="xpanel-wrapper xpanel-wrapper-1">
+                    <div class="xpanel no-bg">
+                        <div class="fill-h" id="flyline"></div>
+                        <script type="text/javascript">
+                            function drawLine1() {
+                                var flyline = document.getElementById('flyline');
+                                var myChart = echarts.init(flyline);
+                                /*
+                              js中地图先注册，然后使用；
+                              * */
+                                var mapName = 'china'
+/*                                $.get('/static/map/china.json',function (chinaJson) {
+                                    echarts.registerMap(mapName,chinaJson);
+                                })*/
+
+
+                                var data = [
+                                    {name:"北京",value:199},
+                                    {name:"天津",value:42},
+                                    {name:"河北",value:102},
+                                    {name:"山西",value:81},
+                                    {name:"内蒙古",value:47},
+                                    {name:"辽宁",value:67},
+                                    {name:"吉林",value:82},
+                                    {name:"黑龙江",value:123},
+                                    {name:"上海",value:24},
+                                    {name:"江苏",value:92},
+                                    {name:"浙江",value:114},
+                                    {name:"安徽",value:109},
+                                    {name:"福建",value:116},
+                                    {name:"江西",value:91},
+                                    {name:"山东",value:119},
+                                    {name:"河南",value:137},
+                                    {name:"湖北",value:116},
+                                    {name:"湖南",value:114},
+                                    {name:"重庆",value:91},
+                                    {name:"四川",value:125},
+                                    {name:"贵州",value:62},
+                                    {name:"云南",value:83},
+                                    {name:"西藏",value:9},
+                                    {name:"陕西",value:80},
+                                    {name:"甘肃",value:56},
+                                    {name:"青海",value:10},
+                                    {name:"宁夏",value:18},
+                                    {name:"新疆",value:180},
+                                    {name:"广东",value:123},
+                                    {name:"广西",value:59},
+                                    {name:"海南",value:14},
+                                ];
+
+                                var geoCoordMap = {};
+                                var toolTipData = [
+                                    {name:"北京",value:[{name:"科技人才总数",value:95},{name:"理科",value:82}]},
+                                    {name:"天津",value:[{name:"文科",value:22},{name:"理科",value:20}]},
+                                    {name:"河北",value:[{name:"文科",value:60},{name:"理科",value:42}]},
+                                    {name:"山西",value:[{name:"文科",value:40},{name:"理科",value:41}]},
+                                    {name:"内蒙古",value:[{name:"文科",value:23},{name:"理科",value:24}]},
+                                    {name:"辽宁",value:[{name:"文科",value:39},{name:"理科",value:28}]},
+                                    {name:"吉林",value:[{name:"文科",value:41},{name:"理科",value:41}]},
+                                    {name:"黑龙江",value:[{name:"文科",value:35},{name:"理科",value:31}]},
+                                    {name:"上海",value:[{name:"文科",value:12},{name:"理科",value:12}]},
+                                    {name:"江苏",value:[{name:"文科",value:47},{name:"理科",value:45}]},
+                                    {name:"浙江",value:[{name:"文科",value:57},{name:"理科",value:57}]},
+                                    {name:"安徽",value:[{name:"文科",value:57},{name:"理科",value:52}]},
+                                    {name:"福建",value:[{name:"文科",value:59},{name:"理科",value:57}]},
+                                    {name:"江西",value:[{name:"文科",value:49},{name:"理科",value:42}]},
+                                    {name:"山东",value:[{name:"文科",value:67},{name:"理科",value:52}]},
+                                    {name:"河南",value:[{name:"文科",value:69},{name:"理科",value:68}]},
+                                    {name:"湖北",value:[{name:"文科",value:60},{name:"理科",value:56}]},
+                                    {name:"湖南",value:[{name:"文科",value:62},{name:"理科",value:52}]},
+                                    {name:"重庆",value:[{name:"文科",value:47},{name:"理科",value:44}]},
+                                    {name:"四川",value:[{name:"文科",value:65},{name:"理科",value:60}]},
+                                    {name:"贵州",value:[{name:"文科",value:32},{name:"理科",value:30}]},
+                                    {name:"云南",value:[{name:"文科",value:42},{name:"理科",value:41}]},
+                                    {name:"西藏",value:[{name:"文科",value:5},{name:"理科",value:4}]},
+                                    {name:"陕西",value:[{name:"文科",value:38},{name:"理科",value:42}]},
+                                    {name:"甘肃",value:[{name:"文科",value:28},{name:"理科",value:28}]},
+                                    {name:"青海",value:[{name:"文科",value:5},{name:"理科",value:5}]},
+                                    {name:"宁夏",value:[{name:"文科",value:10},{name:"理科",value:8}]},
+                                    {name:"新疆",value:[{name:"文科",value:36},{name:"理科",value:31}]},
+                                    {name:"广东",value:[{name:"文科",value:63},{name:"理科",value:60}]},
+                                    {name:"广西",value:[{name:"文科",value:29},{name:"理科",value:30}]},
+                                    {name:"海南",value:[{name:"文科",value:8},{name:"理科",value:6}]},
+                                ];
+
+                                /*获取地图数据*/
+                                myChart.showLoading();
+                                var mapFeatures = echarts.getMap(mapName).geoJson.features;
+                                myChart.hideLoading();
+                                mapFeatures.forEach(function(v) {
+                                    // 地区名称
+                                    var name = v.properties.name;
+                                    // 地区经纬度
+                                    geoCoordMap[name] = v.properties.cp;
+
+                                });
+
+                                console.log(data)
+                                console.log(toolTipData)
+                                var max = 480,
+                                    min = 9; // todo
+                                var maxSize4Pin = 100,
+                                    minSize4Pin = 20;
+
+                                var convertData = function(data) {
+                                    var res = [];
+                                    for (var i = 0; i < data.length; i++) {
+                                        var geoCoord = geoCoordMap[data[i].name];
+                                        if (geoCoord) {
+                                            res.push({
+                                                name: data[i].name,
+                                                value: geoCoord.concat(data[i].value),
+                                            });
+                                        }
+                                    }
+                                    return res;
+                                };
+                                option = {
+                                    tooltip: {
+                                        padding: 0,
+                                        enterable: true,
+                                        transitionDuration: 1,
+                                        textStyle: {
+                                            color: '#000',
+                                            decoration: 'none',
+                                        },
+                                        // position: function (point, params, dom, rect, size) {
+                                        //   return [point[0], point[1]];
+                                        // },
+                                        formatter: function(params) {
+                                            // console.log(params)
+                                            var tipHtml = '';
+                                            tipHtml = '<div style="width:280px;height:180px;background:rgba(22,80,158,0.8);border:1px solid rgba(7,166,255,0.7)">'
+                                                +'<div style="width:100%;height:40px;line-height:40px;border-bottom:2px solid rgba(7,166,255,0.7);padding:0 20px">'+'<i style="display:inline-block;width:8px;height:8px;background:#16d6ff;border-radius:40px;">'+'</i>'
+                                                +'<span style="margin-left:10px;color:#fff;font-size:16px;">'+params.name+'</span>'+'</div>'
+                                                +'<div style="padding:20px">'
+                                                +'<p style="color:#fff;font-size:12px;">'+'<i style="display:inline-block;width:10px;height:10px;background:#16d6ff;border-radius:40px;margin:0 8px">'+'</i>'
+                                                +'单位总数：'+'<span style="color:#11ee7d;margin:0 6px;">'+toolTipData.length+'</span>'+'个'+'</p>'
+                                                +'<p style="color:#fff;font-size:12px;">'+'<i style="display:inline-block;width:10px;height:10px;background:#16d6ff;border-radius:40px;margin:0 8px">'+'</i>'
+                                                +'总人数：'+'<span style="color:#f48225;margin:0 6px;">'+toolTipData.length+'</span>'+'个'+'</p>'
+                                                +'<p style="color:#fff;font-size:12px;">'+'<i style="display:inline-block;width:10px;height:10px;background:#16d6ff;border-radius:40px;margin:0 8px">'+'</i>'
+                                                +'总人数：'+'<span style="color:#f4e925;margin:0 6px;">'+toolTipData.length+'</span>'+'个'+'</p>'
+                                                +'<p style="color:#fff;font-size:12px;">'+'<i style="display:inline-block;width:10px;height:10px;background:#16d6ff;border-radius:40px;margin:0 8px">'+'</i>'
+                                                +'总人数：'+'<span style="color:#25f4f2;margin:0 6px;">'+toolTipData.length+'</span>'+'个'+'</p>'
+                                                +'</div>'+'</div>';
+                                            setTimeout(function() {
+                                                tooltipCharts(params.name);
+                                            }, 10);
+                                            return tipHtml;
+                                        }
+
+                                    },
+
+                                    visualMap: {
+                                        show: true,
+                                        min: 0,
+                                        max: 200,
+                                        left: '10%',
+                                        top: 'bottom',
+                                        calculable: true,
+                                        seriesIndex: [1],
+                                        inRange: {
+                                            color: ['#04387b', '#467bc0'] // 蓝绿
+                                        }
+                                    },
+                                    geo: {
+                                        show: true,
+                                        map: mapName,
+                                        label: {
+                                            normal: {
+                                                show: false
+                                            },
+                                            emphasis: {
+                                                show: false,
+                                            }
+                                        },
+                                        roam: false,
+                                        itemStyle: {
+                                            normal: {
+                                                areaColor: '#023677',
+                                                borderColor: '#1180c7',
+                                            },
+                                            emphasis: {
+                                                areaColor: '#4499d0',
+                                            }
+                                        }
+                                    },
+                                    series: [{
+                                        name: '散点',
+                                        type: 'scatter',
+                                        coordinateSystem: 'geo',
+                                        data: convertData(data),
+                                        symbolSize: function(val) {
+                                            return val[2] / 10;
+                                        },
+                                        label: {
+                                            normal: {
+                                                formatter: '{b}',
+                                                position: 'right',
+                                                show: true
+                                            },
+                                            emphasis: {
+                                                show: true
+                                            }
+                                        },
+                                        itemStyle: {
+                                            normal: {
+                                                color: '#fff'
+                                            }
+                                        }
+                                    },
+                                        {
+                                            type: 'map',
+                                            map: mapName,
+                                            geoIndex: 0,
+                                            aspectScale: 0.75, //长宽比
+                                            showLegendSymbol: false, // 存在legend时显示
+                                            label: {
+                                                normal: {
+                                                    show: true
+                                                },
+                                                emphasis: {
+                                                    show: false,
+                                                    textStyle: {
+                                                        color: '#fff'
+                                                    }
+                                                }
+                                            },
+                                            roam: true,
+                                            itemStyle: {
+                                                normal: {
+                                                    areaColor: '#031525',
+                                                    borderColor: '#3B5077',
+                                                },
+                                                emphasis: {
+                                                    areaColor: '#2B91B7'
+                                                }
+                                            },
+                                            animation: false,
+                                            data: data
+                                        },
+                                        {
+                                            name: '点',
+                                            type: 'scatter',
+                                            coordinateSystem: 'geo',
+                                            zlevel: 6,
+                                        },
+                                        {
+                                            name: 'Top 5',
+                                            type: 'effectScatter',
+                                            coordinateSystem: 'geo',
+                                            data: convertData(data.sort(function(a, b) {
+                                                return b.value - a.value;
+                                            }).slice(0, 10)),
+                                            symbolSize: function(val) {
+                                                return val[2] / 10;
+                                            },
+                                            showEffectOn: 'render',
+                                            rippleEffect: {
+                                                brushType: 'stroke'
+                                            },
+                                            hoverAnimation: true,
+                                            label: {
+                                                normal: {
+                                                    formatter: '{b}',
+                                                    position: 'left',
+                                                    show: false
+                                                }
+                                            },
+                                            itemStyle: {
+                                                normal: {
+                                                    color: 'yellow',
+                                                    shadowBlur: 10,
+                                                    shadowColor: 'yellow'
+                                                }
+                                            },
+                                            zlevel: 1
+                                        },
+
+                                    ]
+                                };
+
+
+                                myChart.setOption(option);
+                                window.onresize = function () {
+                                    this.myChart.resize();
+                                };
+
+                            }
+                            drawLine1();
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 fill-h">
+                <div class="xpanel-wrapper xpanel-wrapper-2">
+                    <div class="xpanel">
+                        <div class="fill-h" id="pie1">
+                        </div>
+                        <script type="text/javascript">
+                            function drawLine1() {
+                                var pie1 = document.getElementById('pie1');
+                                var myChart = echarts.init(pie1);
+                                var data = [{
+                                    "name": "1",
+                                    "value": 10
+                                }, {
+                                    "name": "2",
+                                    "value": 10
+                                }, {
+                                    "name": "3",
+                                    "value": 10
+                                }, {
+                                    "name": "4",
+                                    "value": 10
+                                }, {
+                                    "name": "5",
+                                    "value": 10
+                                }, {
+                                    "name": "6",
+                                    "value": 20
+                                }, {
+                                    "name": "7",
+                                    "value": 30
+                                }, ]
+
+
+                                option = {
+
+                                    color: ['#A0CE3A', '#31C5C0', '#1E9BD1', '#0F347B', '#585247', '#7F6AAD', '#009D85', "rgba(250,250,250,0.3)"],
+                                    title: {
+                                        text: '总数',
+                                        subtext: 7789,
+                                        textStyle: {
+                                            color: '#f2f2f2',
+                                            fontSize: 15,
+                                            // align: 'center'
+                                        },
+                                        subtextStyle: {
+                                            fontSize: 15,
+                                            color: ['#ff9d19']
+                                        },
+                                        x: 'center',
+                                        y: 'center',
+                                    },
+                                    grid: {
+                                        bottom: 150,
+                                        left: 100,
+                                        right: '10%'
+                                    },
+                                    series: [
+                                        // 主要展示层的
+                                        {
+                                            radius: ['30%', '61%'],
+                                            center: ['50%', '50%'],
+                                            type: 'pie',
+                                            label: {
+                                                normal: {
+                                                    show: true,
+                                                    formatter: "{c}%",
+                                                    textStyle: {
+                                                        fontSize: 30,
+
+                                                    },
+                                                    position: 'outside'
+                                                },
+                                                emphasis: {
+                                                    show: true
+                                                }
+                                            },
+                                            labelLine: {
+                                                normal: {
+                                                    show: true,
+                                                    length: 30,
+                                                    length2: 55
+                                                },
+                                                emphasis: {
+                                                    show: true
+                                                }
+                                            },
+                                            name: "民警训练总量",
+                                            data: data,
+
+                                        },
+                                        // 边框的设置
+                                        {
+                                            radius: ['30%', '34%'],
+                                            center: ['50%', '50%'],
+                                            type: 'pie',
+                                            label: {
+                                                normal: {
+                                                    show: false
+                                                },
+                                                emphasis: {
+                                                    show: false
+                                                }
+                                            },
+                                            labelLine: {
+                                                normal: {
+                                                    show: false
+                                                },
+                                                emphasis: {
+                                                    show: false
+                                                }
+                                            },
+                                            animation: false,
+                                            tooltip: {
+                                                show: false
+                                            },
+                                            data: [{
+                                                value: 1,
+                                                itemStyle: {
+                                                    color: "rgba(250,250,250,0.3)",
+                                                },
+                                            }],
+                                        }, {
+                                            name: '外边框',
+                                            type: 'pie',
+                                            clockWise: false, //顺时加载
+                                            hoverAnimation: false, //鼠标移入变大
+                                            center: ['50%', '50%'],
+                                            radius: ['65%', '65%'],
+                                            label: {
+                                                normal: {
+                                                    show: false
+                                                }
+                                            },
+                                            data: [{
+                                                value: 9,
+                                                name: '',
+                                                itemStyle: {
+                                                    normal: {
+                                                        borderWidth: 2,
+                                                        borderColor: '#0b5263'
+                                                    }
+                                                }
+                                            }]
+                                        },
+                                    ]
+                                };
+                                myChart.setOption(option);
+                                window.onresize = function () {
+                                    this.myChart.resize();
+                                };
+
+                            }
+                            drawLine1();
+                        </script>
+                    </div>
+                </div>
+                <div class="xpanel-wrapper xpanel-wrapper-2">
+                    <div class="xpanel">
+                        <div class="fill-h" id="pie2"></div>
+                        <script type="text/javascript">
+                            function drawLine1() {
+                                var pie2 = document.getElementById('pie2');
+                                var myChart = echarts.init(pie2);
+                                var colors = ['#9b92fe', '#7ba5c6', '#1f62ea', '#1990e9', '#49ddfc', '#6bdafe', '#39f381', '#e9e37c'];
+                                // option
+                                option = {
+                                    tooltip: {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                                    },
+                                    series: [
+                                        {
+                                            name: '访问来源',
+                                            type: 'pie',
+                                            selectedMode: 'single',
+                                            radius: [0, '45%'],
+                                            label: {
+                                                show: false
+                                            },
+                                            labelLine: {
+                                                normal: {
+                                                    show: false
+                                                }
+                                            },
+                                            color: colors,
+                                            data: [
+                                                {
+                                                    value: 335,
+                                                    name: '直达'
+                                                },
+                                                {
+                                                    value: 679,
+                                                    name: '营销广告'
+                                                },
+                                                {
+                                                    value: 1548,
+                                                    name: '搜索引擎'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: '访问来源',
+                                            type: 'pie',
+                                            radius: ['64%', '85%'],
+                                            color: colors,
+                                            labelLine: {
+                                                normal: {
+                                                    show: false
+                                                }
+                                            },
+                                            label: {
+                                                show: false
+                                            },
+                                            data: [
+                                                {
+                                                    value: 335,
+                                                    name: '直达'
+                                                },
+                                                {
+                                                    value: 310,
+                                                    name: '邮件营销'
+                                                },
+                                                {
+                                                    value: 234,
+                                                    name: '联盟广告'
+                                                },
+                                                {
+                                                    value: 135,
+                                                    name: '视频广告'
+                                                },
+                                                {
+                                                    value: 1048,
+                                                    name: '百度'
+                                                },
+                                                {
+                                                    value: 251,
+                                                    name: '谷歌'
+                                                },
+                                                {
+                                                    value: 147,
+                                                    name: '必应'
+                                                },
+                                                {
+                                                    value: 102,
+                                                    name: '其他'
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                };
+                                myChart.setOption(option);
+                                window.onresize = function () {
+                                    this.myChart.resize();
+                                };
+
+                            }
+                            drawLine1();
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
